@@ -1,0 +1,5 @@
+<!-- 当type=1显示的view -->
+<view wx:if="{{type==1}}">
+    <button bindtap="typeSwitch">123</button>
+</view>
+<view wx:if="{{type==2}}">456</view>

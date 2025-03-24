@@ -1,0 +1,9 @@
+<view class="article-container">
+    <view class="content">
+        <view class="title"> {{articleData.title}} </view>
+        <view style="padding-bottom: 60rpx;color:#999999;">{{articleData.updated_at}} <text style="font-size:28rpx;">访问量：{{articleData.click}}</text>
+        </view>
+        <image src="{{articleData.thumb}}" style="width:calc(100vw - 48rpx)"></image>
+        <rich-text nodes="{{articleDatabody}}"></rich-text>
+    </view>
+</view>

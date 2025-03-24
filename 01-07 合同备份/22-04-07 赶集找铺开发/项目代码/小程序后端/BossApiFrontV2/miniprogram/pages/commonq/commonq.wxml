@@ -1,0 +1,112 @@
+<!-- pages/commonq/commonq.wxml -->
+<view class="commonQ">常见问题</view>
+<view class="container">
+    <view class="content">
+        <!-- item1 -->
+        <view class="content-item" catchtap="ChangeValue1">
+            <view class="content-item-title">
+                <view class="item-title-title">1.我支付完费用，假如没有效果怎么办？</view>
+            </view>
+            <view style="position:relative;top: -14px;">
+                <image src="../../images/back4.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate!=1}}"></image>
+                <image src="../../images/back3.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate==1}}"></image>
+            </view>
+            <view class=" content-item-text" wx:if="{{currentActivate==1}}">
+                这个问题转店老板大可放心，任何公司都是盈利为中心，您支付的费用是一次性的，我们的服务是无止境的，最快帮你把店铺成功推广出去，不仅可以降低我们广告服务和人工成本，还可以给平台带来良好的口碑，平台在线客服随时帮您在线解答转店，选址的问题，如果您有转店，开新店的需求，可以在平台随时发布您的信息，祝您生活愉快，生意兴隆!
+            </view>
+            <view class="OneUnderLine"></view>
+        </view>
+        <!-- item2 -->
+        <view class="content-item" catchtap="ChangeValue2">
+            <view class="content-item-title">
+                <view class="item-title-title">2.为什么选择赶集找铺？我都没有听过</view>
+            </view>
+            <view style="position:relative;top: -14px;">
+                <image src="../../images/back4.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate!=2}}"></image>
+                <image src="../../images/back3.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate==2}}"></image>
+            </view>
+            <view class=" content-item-text" wx:if="{{currentActivate==2}}">
+                1:赶集找铺经纪人深耕选址，转店行业，- -直广受客户信赖，10年磨一剑，只为成就更多开店老板。2:没有听过我们平台也正常因为百分之95的转店用户都是第- -次转店，微信用户多达10亿，微信搜索赶集找铺，赶集找铺小程序第-个展示在全网找店用户微信里，你店铺曝光度可想而知，[传统方式自己门口贴转让告示] :容易打消员工积极性，增加顾客消费顾虑。[网站发布信息] :综合性平台客户隐私容易暴露，骚扰电话居多不下，10个电话9个中介，有数量，没质量，身心疲惫，效果不佳。[线 下各种先收取中介费的转店公司] :收取费用高，转让费几万的小店子本来就是赔钱处理，店还没有成交，先收最少几千的中介费，无形增加自己成本。赶集找铺一次性收取最合理的店铺推广服务费转店途中，成功转让后店主无需再支付任何费用，免费刷新，加急置顶推广，是您转店中的不二选择,物超所值
+            </view>
+            <view class="OneUnderLine"></view>
+        </view>
+        <view class="content-item" catchtap="ChangeValue3">
+            <view class="content-item-title">
+                <view class="item-title-title">3.我支付合作以后，平台提供哪些服务？</view>
+            </view>
+            <view style="position:relative;top: -14px;">
+                <image src="../../images/back4.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate!=3}}"></image>
+                <image src="../../images/back3.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate==3}}"></image>
+            </view>
+            <view class=" content-item-text" wx:if="{{currentActivate==3}}">
+                平台一次性收费，包转成功为止，平台每天无限刷新，始终保持客户转店信息首页展示，客服一对一经纪人一对一电话联系找店客户，服务直到店铺成功转让为止，让你花最少的费用，享受最优质的服务。
+            </view>
+            <view class="OneUnderLine"></view>
+        </view>
+        <view class="content-item" catchtap="ChangeValue4">
+            <view class="content-item-title">
+                <view class="item-title-title">4.【转店必读】：没有支付发布推广费用的话，别人能看到我的转店信息吗？</view>
+            </view>
+            <view style="position:relative;top: -14px;">
+                <image src="../../images/back4.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate!=4}}"></image>
+                <image src="../../images/back3.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate==4}}"></image>
+            </view>
+            <view class=" content-item-text" wx:if="{{currentActivate==4}}">
+                您好，如果没有支付发布推广费用的话，平台无法持续帮您匹配找店用户和推广店铺信息，别人是不能看到您的转店信息,您也达不到快速转店的效果，尽早发布，及时转出。
+            </view>
+            <view class="OneUnderLine"></view>
+        </view>
+        <view class="content-item" catchtap="ChangeValue5">
+            <view class="content-item-title">
+                <view class="item-title-title">5.【找店必看】：怎么可以快速找到一家心仪的盈利店铺</view>
+            </view>
+            <view style="position:relative;top: -14px;">
+                <image src="../../images/back4.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate!=5}}"></image>
+                <image src="../../images/back3.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate==5}}"></image>
+            </view>
+            <view class=" content-item-text" wx:if="{{currentActivate==5}}">
+                其实市场大部分的店铺转让，不一定非要是赔钱亏损的，每一家店铺，每一个情况，做生意，事在人为，同行无同利，如有找店需求请联系在线客服，客服会优先把您对接找店业务，帮您快速开店，通过本平台接手的店铺，如遇拆迁，房东违约退租情况，本平台承担一切责任
+            </view>
+            <view class="OneUnderLine"></view>
+        </view>
+        <view class="content-item" catchtap="ChangeValue6">
+            <view class="content-item-title">
+                <view class="item-title-title">6.【为什么发布平台要收费】？</view>
+            </view>
+            <view style="position:relative;top: -14px;">
+                <image src="../../images/back4.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate!=6}}"></image>
+                <image src="../../images/back3.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate==6}}"></image>
+            </view>
+            <view class=" content-item-text" wx:if="{{currentActivate==6}}">
+                赶集找铺是国内最大的，最专业，最正规的找店平台。平台投入巨大的人力财力来搭建国内最先进的信息推广，筛选系统,帮助转店客户及时转店。通过平台转店成功后，后期无任何费用，不仅省去了几千的中介费，还省去了最宝贵的时间，经营店铺，少赔就是多赚，同城易铺一直秉承:让转店客户享用最实惠的费用，快速转出自己的店铺。
+            </view>
+            <view class="OneUnderLine"></view>
+        </view>
+        <view class="content-item" catchtap="ChangeValue7">
+            <view class="content-item-title">
+                <view class="item-title-title">7.【重要提示】：店铺已经成功转让了，怎么下架信息？</view>
+            </view>
+            <view style="position:relative;top: -14px;">
+                <image src="../../images/back4.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate!=7}}"></image>
+                <image src="../../images/back3.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate==7}}"></image>
+            </view>
+            <view class=" content-item-text" wx:if="{{currentActivate==7}}">
+                1:在小程序首页下方点击[我的] 2:再点击[我的店铺] 3:选择你要下架的信息，再点击下架按钮即可，或直接联系你的一对一经纪人。
+            </view>
+            <view class="OneUnderLine"></view>
+        </view>
+        <view class="content-item" catchtap="ChangeValue8">
+            <view class="content-item-title">
+                <view class="item-title-title">8.【发布需知】：怎么收费？转出额外还需要费用吗？</view>
+            </view>
+            <view style="position:relative;top: -14px;">
+                <image src="../../images/back4.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate!=8}}"></image>
+                <image src="../../images/back3.png" style="width:15px;height:15px;top:-1px;right:20rpx;position:absolute;" wx:if="{{currentActivate==8}}"></image>
+            </view>
+            <view class=" content-item-text" wx:if="{{currentActivate==8}}">
+                平台只需发布时一次性收取转店推广服务费，转出不再收取额外费用，百分之80以.上的转店老板都是亏损低价处理店铺，本平台坚持拒绝店铺未成交先收取高达几千元的高昂中介费，平台无论找店，转店客户首次合作，后期再次创业，选址，招商转店均不再收取任何费用。
+            </view>
+            <view class="OneUnderLine"></view>
+        </view>
+    </view>
+</view>

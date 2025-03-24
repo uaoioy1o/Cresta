@@ -1,0 +1,13 @@
+var filterTag = (function(tags, value) {
+    return (tags.indexOf(value) > -1)
+});
+var getDateItem = (function() {
+    const;
+    dateItems = ['刚刚活跃', '前一日活跃', '前三日活跃', '前七日活跃', '前一个月活跃', '前三个月活跃', '前半年活跃'];
+    let;
+    index = parseInt(Math.random() * 10000) % 7;
+    console.log(23123123, index);
+    return (dateItems[((nt_0 = (index), null == nt_0 ? undefined : 'number' === typeof nt_0 ? nt_0 : "" + nt_0))])
+});
+module.exports.filterTag = filterTag;
+module.exports.getDateItem = getDateItem;

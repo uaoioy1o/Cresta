@@ -1,0 +1,2 @@
+EPOCH=001,Accuracy= 34.441%,Extraction= 6.000%
+EPOCH=002,Accuracy= 46.971%,Extraction= 6.000%

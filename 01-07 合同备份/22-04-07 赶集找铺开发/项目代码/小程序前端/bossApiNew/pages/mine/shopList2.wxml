@@ -1,0 +1,70 @@
+<view class="order-list-container">
+    <view class="nav">
+        <view catchtap="openPage" class="type" data-wpyopenpage-a="{{item.value}}" wx:for="{{goodsType}}" wx:key="item">
+            <text class="{{currentType==item.value?'active':''}}">{{item.name}}</text>
+        </view>
+    </view>
+    <view class="goods_list">
+        <view style="border-bottom: 1rpx solid #F2F3F4;{{$store_item_check$btnType=='foot'?'background: #fff;padding: 24rpx;margin-bottom: 24rpx;':''}}" wx:for="{{dataSource}}" wx:key="item">
+            <view catchtap="$store_item_check$navDetail" class="tour-item {{item.id==$store_item_check$currentId?'active':''}}" data-com-index="{{undefined}}" data-wpynavdetail-a="{{item}}">
+                <view style="display: flex;align-items: center;">
+                    <image src="../../images/{{item.id==$store_item_check$currentId?'confirm':'circle'}}.png" style="width:36rpx;height:36rpx;margin-right:24rpx"></image>
+                </view>
+                <view class="thumb" style="background-image:url({{item.shop_images&&item.shop_images.length>0&&item.shop_images[0]}})" wx:if="{{item.shop_type!=3}}">
+                    <view class="bread" wx:if="{{item.is_new==1}}">上新</view>
+                    <view class="bread" wx:if="{{item.is_new==0&&item.is_recommend==1}}">置顶</view>
+                </view>
+                <view class="info" style="{{item.shop_type==3?'padding-left:0':''}}">
+                    <view>
+                        <view class="title">
+                            <text>{{item.title}}{{$store_item_check$isShowBottom}}</text>
+                        </view>
+                        <view class="info-des"> {{item.city_name+'-'+item.area_name}} | {{item.area_size}} ㎡ </view>
+                        <view class="info-tags">
+                            <text style="{{index==0?'color:#FD4C38;border-color:#FD4C38':index==1?'color:#4B97E7;border-color:#4B97E7':'color:#FDBC17;border-color:#FDBC17'}}" wx:for="{{item.lable_list}}" wx:for-item="tag" wx:key="tag">{{tag}}</text>
+                        </view>
+                    </view>
+                    <view class="label">
+                        <view>
+                            <text class="price">
+                                <text class="money">{{item.rent_money}}</text>元/月 </text>
+                        </view>
+                        <text class="label-distance">最近更新时间：{{item.updated_at}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="tour-bottom" wx:if="{{$store_item_check$bottom=='show'&&item.shop_type!=3}}">
+                <view>
+                    <image catchtap="$store_item_check$openProfile" data-com-index="{{undefined}}" data-wpyopenprofile-a="{{headImg}}" src="{{headImg.headimgurl}}" style="width:48rpx;height:48rpx;border-radius:24rpx" wx:for="{{item.consultant_list}}" wx:for-item="headImg" wx:key="headImg"></image>
+                </view>
+                <view class="right_icon" style="display: flex;align-items: center;">{{item.consultant_count}}人已咨询</view>
+            </view>
+            <view class="tour-bottom" wx:if="{{$store_item_check$bottom=='show'&&item.shop_type==3}}">
+                <view style="display: flex;">
+                    <image src="../../images/confirm.png" style="width:32rpx;height:32rpx;margin-right:6rpx"></image> 已将信息推送给{{item.consultant_count}}个加速转店客户 </view>
+                <view style="display: flex;align-items: center;background-color:#FE8462;color:#fff;font-size:12px;padding:6rpx;border-radius:2px"> 我要加速 </view>
+            </view>
+            <view class="tour-bottom btn-area" wx:if="{{$store_item_check$btnType=='follow'}}">
+                <text catchtap="$store_item_check$handleCancel" data-com-index="{{undefined}}" data-wpyhandlecancel-a="{{item}}">取消关注</text>
+                <text>电话咨询</text>
+            </view>
+            <view class="tour-bottom btn-area" wx:if="{{$store_item_check$btnType=='store'}}">
+                <text catchtap="$store_item_check$handleEdit" data-com-index="{{undefined}}" data-wpyhandleedit-a="{{item}}">编辑</text>
+                <text catchtap="$store_item_check$handleUp" data-com-index="{{undefined}}" data-wpyhandleup-a="{{item}}" wx:if="{{item.status==2}}">上架</text>
+                <block wx:if="{{item.status==1}}">
+                    <text catchtap="$store_item_check$handleUp" data-com-index="{{undefined}}" data-wpyhandleup-a="{{item}}">下架</text>
+                    <text>刷新</text>
+                    <text>匹配</text>
+                    <text>置顶</text>
+                </block>
+            </view>
+        </view>
+        <view class="empty-content" wx:if="{{dataSource.length==0}}">
+            <view class="empty-card">
+                <image class="er-code-status" src="../../images/empty.png"></image>
+                <text class="empty-no">{{$empty$title}}</text>
+            </view>
+        </view>
+    </view>
+    <button catchtap="submit" class="button_submit" data-wpysubmit-a="">确定</button>
+</view>

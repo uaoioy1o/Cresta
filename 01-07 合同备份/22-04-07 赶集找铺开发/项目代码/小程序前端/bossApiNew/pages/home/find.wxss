@@ -1,0 +1,475 @@
+.swiper {
+    height: 180rpx;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    width: calc(100vw - 48rpx);
+}
+
+.swiper .banner_img {
+    background-size: cover;
+    border-radius: 12rpx;
+    height: 100%;
+    width: 100%;
+}
+
+.main-title {
+    font-size: 32rpx;
+}
+
+.pannel .pannel-title {
+    font-weight: 500;
+    padding: 24rpx;
+}
+
+.pannel .pannel-body {
+    padding: 24rpx;
+}
+
+view {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1;
+}
+
+.right_icon:after {
+    background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    width: 20rpx;
+}
+
+.empty-content {
+    margin: 1.59rem .3rem 1rem;
+    position: relative;
+    text-align: center;
+}
+
+.empty-content .empty-card .er-code-status {
+    height: 128rpx;
+    margin: 300rpx 0 0;
+    width: 128rpx;
+}
+
+.empty-content .empty-card .empty-no {
+    display: inline-block;
+    margin: 40rpx 0;
+    width: 100%;
+}
+
+.empty-content .empty-card .empty-buy {
+    color: #999;
+    font-size: 32rpx;
+    padding: .8rem 0;
+}
+
+.main-title {
+    font-size: 32rpx;
+}
+
+.pannel .pannel-title {
+    font-weight: 500;
+    padding: 24rpx;
+}
+
+.pannel .pannel-body {
+    padding: 24rpx;
+}
+
+view {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1;
+}
+
+.right_icon:after {
+    background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    width: 20rpx;
+}
+
+.content {
+    background: rgba(0,0,0,.4);
+    height: calc(100vh);
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.content .picker {
+    background: #fff;
+    max-height: 400px;
+    overflow: scroll;
+    padding: 0 24rpx;
+}
+
+.content .picker view {
+    align-items: center;
+    border-bottom: 1px solid hsla(0,0%,89%,.38);
+    display: flex;
+    height: 88rpx;
+    justify-content: space-between;
+    line-height: 88rpx;
+    width: calc(100vw - 24px);
+}
+
+.content .picker view.active {
+    color: #e5445a;
+}
+
+.nav {
+    background-color: #fff;
+    border-bottom: 1px solid hsla(0,0%,89%,.38);
+    height: 44px;
+    line-height: 44px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav,.nav view {
+    display: flex;
+    justify-content: center;
+}
+
+.nav view {
+    align-items: center;
+    color: #999;
+    flex: 1;
+}
+
+.main-title {
+    font-size: 32rpx;
+}
+
+.pannel .pannel-title {
+    font-weight: 500;
+    padding: 24rpx;
+}
+
+.pannel .pannel-body {
+    padding: 24rpx;
+}
+
+view {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1;
+}
+
+.right_icon:after {
+    background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    width: 20rpx;
+}
+
+.rule-modal .mask {
+    background-color: rgba(0,0,0,.9);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.rule-modal .nav-item {
+    align-items: center;
+    display: flex;
+    padding: 35rpx 120rpx;
+}
+
+.main-title {
+    font-size: 32rpx;
+}
+
+.pannel .pannel-title {
+    font-weight: 500;
+    padding: 24rpx;
+}
+
+.pannel .pannel-body {
+    padding: 24rpx;
+}
+
+view {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1;
+}
+
+.right_icon:after {
+    background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    width: 20rpx;
+}
+
+.tour-item {
+    background: #fff;
+    border-radius: 12rpx;
+    display: flex;
+    margin-bottom: 24rpx;
+    padding: 24rpx;
+}
+
+.tour-item .thumb {
+    background-size: cover;
+    border-radius: 12rpx;
+    height: 200rpx;
+    width: 200rpx;
+}
+
+.tour-item .thumb .bread {
+    background: linear-gradient(90deg,#fe4028,#ff5a3d);
+    border-radius: 12rpx 0 12rpx 0;
+    color: #fff;
+    font-size: 24rpx;
+    padding: 6rpx 12rpx;
+    width: 50rpx;
+}
+
+.tour-item .info {
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 24rpx;
+    position: relative;
+}
+
+.tour-item .info,.tour-item .info .label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tour-item .info .label {
+    z-index: 10;
+}
+
+.tour-item .info .title {
+    display: flex;
+    justify-content: space-between;
+    line-height: 20px;
+    padding: 0 0 12rpx;
+}
+
+.tour-item .info .title .tag {
+    background-color: rgba(255,230,15,.2);
+    border-radius: 5px;
+    color: #ffe60f;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 0 5px;
+}
+
+.tour-item .info .info-des {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color: #666;
+    display: -webkit-box;
+    font-size: 26rpx;
+    margin-bottom: 12rpx;
+    max-height: 48rpx;
+    overflow: hidden;
+}
+
+.tour-item .info .info-tags {
+    display: flex;
+    margin-bottom: 12rpx;
+}
+
+.tour-item .info .info-tags text {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    border: 1rpx solid #f2f3f4;
+    border-radius: 6rpx;
+    color: #666;
+    display: -webkit-box;
+    font-size: 22rpx;
+    margin-right: 12rpx;
+    overflow: hidden;
+    padding: 6rpx;
+}
+
+.tour-item .info .label .price {
+    color: #fd4c38;
+    font-size: 24rpx;
+}
+
+.tour-item .info .label .price .money {
+    font-size: 40rpx;
+    font-weight: 500;
+    margin-right: 10rpx;
+}
+
+.tour-item .info .label .label-des {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    color: #ffe60f;
+    display: -webkit-box;
+    flex: 1;
+    font-size: 22rpx;
+    height: 22rpx;
+    overflow: hidden;
+}
+
+.tour-item .info .label .label-distance {
+    color: #999;
+    font-size: 22rpx;
+    padding-right: .2rem;
+    text-align: right;
+}
+
+.tour-bottom {
+    align-items: center;
+    background: #fff;
+    justify-content: space-between;
+}
+
+.btn-area,.tour-bottom {
+    display: flex;
+    padding: 0 24rpx 24rpx;
+}
+
+.btn-area {
+    justify-content: flex-end;
+}
+
+.btn-area text {
+    border: 1rpx solid #ff9543;
+    border-radius: 24rpx;
+    color: #ff9543;
+    font-size: 12px;
+    margin-left: 24rpx;
+    padding: 12rpx 24rpx;
+}
+
+.main-title {
+    font-size: 32rpx;
+}
+
+.pannel .pannel-title {
+    font-weight: 500;
+    padding: 24rpx;
+}
+
+.pannel .pannel-body {
+    padding: 24rpx;
+}
+
+view {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1;
+}
+
+.right_icon:after {
+    background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    width: 20rpx;
+}
+
+page {
+    background: #fff;
+}
+
+.home-container .customer-header .header-img {
+    height: 44px;
+}
+
+.home-container .search {
+    justify-content: space-between;
+    width: calc(100vw - 210px);
+}
+
+.home-container .search,.home-container .search .search_input {
+    align-items: center;
+    background: #f8f8f8;
+    border-radius: 35px;
+    display: flex;
+}
+
+.home-container .search .search_input {
+    flex: 1;
+    margin: 0 12rpx;
+    padding: 12rpx;
+}
+
+.home-container .pannel {
+    background: #fff;
+    padding-top: 24rpx;
+}
+
+.home-container .pannel .swiper {
+    height: 180rpx;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    width: calc(100vw - 48rpx);
+}
+
+.home-container .pannel .swiper .banner_img {
+    background-size: cover;
+    border-radius: 12rpx;
+    height: 100%;
+    width: 100%;
+}
+
+.home-container .pannel .pannel-body {
+    padding: 0;
+}
+
+.home-container .pannel .pannel-title {
+    display: flex;
+}
+
+.home-container .pannel .pannel-title .main-title {
+    color: #666;
+    font-weight: 400;
+    margin-right: 12px;
+}
+
+.home-container .pannel .pannel-title .main-title.active {
+    color: #fdbc17;
+    font-weight: 500;
+}
+
+.home-container .pannel .pannel-title .main-all {
+    color: #666;
+    font-size: 24rpx;
+    padding: 0 28rpx 0 24rpx;
+    position: relative;
+}
+
+.home-container .pannel .pannel-title .main-all::after {
+    background-image: url(https://tystatic.liuxx.com/wechat/images/right_icon.png);
+    background-size: cover;
+    bottom: 8rpx;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    position: absolute;
+    right: 0;
+    width: 20rpx;
+}

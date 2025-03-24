@@ -1,0 +1,524 @@
+
+.main-title {
+  font-size: 32rpx;
+}
+.pannel .pannel-title {
+  font-weight: 500;
+  padding: 24rpx;
+}
+.pannel .pannel-body {
+  padding: 24rpx;
+}
+view {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1;
+}
+.right_icon:after {
+  background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+  background-size: cover;
+  content: " ";
+  display: block;
+  height: 20rpx;
+  margin-left: 12rpx;
+  width: 20rpx;
+}
+.tour-item {
+  display: flex;
+  padding-bottom: 24rpx;
+  padding-top: 24rpx;
+}
+.tour-item .thumb {
+  background-size: cover;
+  border-radius: 12rpx;
+  height: 200rpx;
+  width: 200rpx;
+}
+.tour-item .thumb .bread {
+  background: linear-gradient(90deg,#fe4028,#ff5a3d);
+  border-radius: 12rpx 0 12rpx 0;
+  color: #fff;
+  font-size: 24rpx;
+  padding: 6rpx 12rpx;
+  width: 50rpx;
+}
+.tour-item .info {
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  padding-left: 24rpx;
+  position: relative;
+}
+.tour-item .info,.tour-item .info .title {
+  display: flex;
+  justify-content: space-between;
+}
+.tour-item .info .title {
+  padding: 0 0 12rpx;
+}
+.tour-item .info .title text {
+  font-size: 28rpx;
+  font-weight: 700;
+}
+.tour-item .info .info-des {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #666;
+  display: -webkit-box;
+  font-size: 24rpx;
+  margin-bottom: 12rpx;
+  max-height: 48rpx;
+  overflow: hidden;
+}
+.tour-item .info .info-tags {
+  display: flex;
+  margin-bottom: 12rpx;
+}
+.tour-item .info .info-tags text {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  border: 1rpx solid #f2f3f4;
+  border-radius: 6rpx;
+  color: #666;
+  display: -webkit-box;
+  font-size: 22rpx;
+  margin-right: 12rpx;
+  overflow: hidden;
+  padding: 6rpx;
+}
+.tour-item .info .label .price {
+  color: #fd4c38;
+  font-size: 24rpx;
+}
+.tour-item .info .label .price .money {
+  font-size: 40rpx;
+  font-weight: 500;
+  margin-right: 10rpx;
+}
+.tour-item .info .label .label-des {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  color: #ffe60f;
+  display: -webkit-box;
+  flex: 1;
+  font-size: 22rpx;
+  height: 22rpx;
+  overflow: hidden;
+}
+.tour-item .info .label .label-distance {
+  color: #999;
+  font-size: 22rpx;
+  padding-right: .2rem;
+  text-align: right;
+}
+.tour-bottom {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.main-title {
+  font-size: 32rpx;
+}
+.pannel .pannel-title {
+  font-weight: 500;
+  padding: 24rpx;
+}
+.pannel .pannel-body {
+  padding: 24rpx;
+}
+view {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1;
+}
+.right_icon:after {
+  background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+  background-size: cover;
+  content: " ";
+  display: block;
+  height: 20rpx;
+  margin-left: 12rpx;
+  width: 20rpx;
+}
+.rule-modal .mask {
+  background-color: rgba(0,0,0,.9);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+.rule-modal .nav-item {
+  align-items: center;
+  display: flex;
+  padding: 35rpx 120rpx;
+}
+.main-title {
+  font-size: 32rpx;
+}
+.pannel .pannel-title {
+  font-weight: 500;
+  padding: 24rpx;
+}
+.pannel .pannel-body {
+  padding: 24rpx;
+}
+view {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1;
+}
+.right_icon:after {
+  background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+  background-size: cover;
+  content: " ";
+  display: block;
+  height: 20rpx;
+  margin-left: 12rpx;
+  width: 20rpx;
+}
+.tour-item {
+  background: #fff;
+  display: flex;
+  padding: 24rpx;
+}
+.tour-item .thumb {
+  background-size: cover;
+  border-radius: 12rpx;
+  height: 200rpx;
+  width: 200rpx;
+}
+.tour-item .thumb .bread {
+  background: linear-gradient(90deg,#fe4028,#ff5a3d);
+  border-radius: 12rpx 0 12rpx 0;
+  color: #fff;
+  font-size: 24rpx;
+  padding: 6rpx 12rpx;
+  width: 50rpx;
+}
+.tour-item .info {
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  padding-left: 24rpx;
+  position: relative;
+}
+.tour-item .info,.tour-item .info .title {
+  display: flex;
+  justify-content: space-between;
+}
+.tour-item .info .title {
+  line-height: 20px;
+  padding: 0 0 12rpx;
+}
+.tour-item .info .title .tag {
+  background-color: rgba(255,230,15,.2);
+  border-radius: 5px;
+  color: #ffe60f;
+  font-size: 10px;
+  font-weight: 400;
+  padding: 0 5px;
+}
+.tour-item .info .title text {
+  font-size: 28rpx;
+  font-weight: 700;
+}
+.tour-item .info .info-des {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #666;
+  display: -webkit-box;
+  font-size: 24rpx;
+  margin-bottom: 12rpx;
+  max-height: 48rpx;
+  overflow: hidden;
+}
+.tour-item .info .info-tags {
+  display: flex;
+  margin-bottom: 12rpx;
+}
+.tour-item .info .info-tags text {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  border: 1rpx solid #f2f3f4;
+  border-radius: 6rpx;
+  color: #666;
+  display: -webkit-box;
+  font-size: 22rpx;
+  margin-right: 12rpx;
+  overflow: hidden;
+  padding: 6rpx;
+}
+.tour-item .info .label {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.tour-item .info .label .chat {
+  background-color: #ffe60f;
+  color: #fff!important;
+  padding: 2px;
+}
+.tour-item .info .label .price {
+  color: #fd4c38;
+  font-size: 24rpx;
+}
+.tour-item .info .label .price .money {
+  font-size: 40rpx;
+  font-weight: 500;
+  margin-right: 10rpx;
+}
+.tour-item .info .label .label-des {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  color: #ffe60f;
+  display: -webkit-box;
+  flex: 1;
+  font-size: 22rpx;
+  height: 22rpx;
+  overflow: hidden;
+}
+.tour-item .info .label .label-distance {
+  color: #999;
+  font-size: 22rpx;
+  padding-right: .2rem;
+  text-align: right;
+}
+.tour-bottom {
+  align-items: center;
+  background: #fff;
+  justify-content: space-between;
+}
+.btn-area,.tour-bottom {
+  display: flex;
+  padding: 0 24rpx 24rpx;
+}
+.btn-area {
+  justify-content: flex-end;
+}
+.btn-area text {
+  border: 1rpx solid #ff9543;
+  border-radius: 24rpx;
+  color: #ff9543;
+  font-size: 12px;
+  margin-left: 24rpx;
+  padding: 12rpx 24rpx;
+}
+.tab-bar {
+  border-top: 1rpx solid #f2f3f4;
+  bottom: 0;
+  display: flex;
+  height: 49px;
+  padding-bottom: env(safe-area-inset-bottom);
+  position: fixed;
+  width: calc(100vw);
+}
+.tab-bar .tab-item {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+.tab-bar .tab-item .item-bottom {
+  font-size: 20rpx;
+  font-weight: 500;
+}
+.main-title {
+  font-size: 32rpx;
+}
+.pannel .pannel-title {
+  font-weight: 500;
+  padding: 24rpx;
+}
+.pannel .pannel-body {
+  padding: 24rpx;
+}
+view {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1;
+}
+.right_icon:after {
+  background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+  background-size: cover;
+  content: " ";
+  display: block;
+  height: 20rpx;
+  margin-left: 12rpx;
+  width: 20rpx;
+}
+page {
+  background: #fff;
+}
+.home-container .customer-header .header-img {
+  height: 44px;
+}
+.home-container .header {
+  background-size: cover;
+  height: 370rpx;
+  width: 750rpx;
+}
+.home-container .statistic {
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx;
+}
+.home-container .data_icon {
+  background-size: cover;
+  box-shadow: 0 6px 6px 0 hsla(222,4%,52%,.05);
+  height: 140rpx;
+  width: 390rpx;
+}
+.home-container .data_icon .data_info {
+  display: flex;
+  flex-direction: column;
+  height: 108rpx;
+  justify-content: space-around;
+  padding: 24rpx;
+}
+.home-container .data_icon .data_info .num {
+  font-size: 36rpx;
+  font-weight: 500;
+  width: 80px;
+}
+.home-container .data_icon .data_info .last {
+  color: #999;
+  font-size: 22rpx;
+  font-weight: 400;
+}
+.home-container .search {
+  justify-content: space-between;
+  width: calc(100vw - 200px);
+}
+.home-container .search,.home-container .search .search_input {
+  align-items: center;
+  background: #f8f8f8;
+  border-radius: 35px;
+  display: flex;
+}
+.home-container .search .search_input {
+  flex: 1;
+  margin: 0 12rpx;
+  padding: 12rpx;
+}
+.home-container .nav {
+  background: #fff;
+  border-radius: 24rpx;
+  box-shadow: 0 5px 5px 0 hsla(0,0%,58%,.15);
+  margin: 0 auto;
+  margin-top: 40rpx;
+  padding: 48rpx 24rpx;
+  width: calc(100vw - 96rpx);
+}
+.home-container .nav text {
+  color: #333;
+  font-size: 24rpx;
+  padding-top: 24rpx;
+}
+.home-container .nav .nav1 {
+  display: flex;
+}
+.home-container .nav .nav1 .nav-item {
+  display: flex;
+  flex: 1;
+}
+.home-container .nav .nav1 .nav-item view {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.home-container .nav .nav2 {
+  display: flex;
+  margin-top: 24rpx;
+}
+.home-container .nav .nav2 .nav-item {
+  display: flex;
+  flex: 1;
+}
+.home-container .nav .nav2 .nav-item view {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.home-container .pannel .pannel-title {
+  display: flex;
+}
+.home-container .pannel .pannel-title .main-title {
+  align-items: center;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  margin-right: 12px;
+}
+.home-container .pannel .pannel-title .main-title.active {
+  color: #ffe60f;
+  font-weight: 500;
+}
+.home-container .pannel .pannel-title .main-title.active .border {
+  background: #ffe60f;
+  height: 2px;
+  margin-top: 12rpx;
+  width: 24px;
+}
+.home-container .pannel .pannel-body {
+  padding: 0;
+}
+.home-container .swiper {
+  height: 180rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  width: calc(100vw - 48rpx);
+}
+.home-container .swiper .banner_img {
+  background-size: cover;
+  border-radius: 12rpx;
+  height: 100%;
+  width: 100%;
+}
+.home-container .back-top {
+  align-items: center;
+  background: #fff;
+  border: 1rpx solid #eee;
+  border-radius: 24px;
+  bottom: 100px;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  height: 40px;
+  justify-content: center;
+  position: fixed;
+  right: 24px;
+  width: 40px;
+  z-index: 100;
+}
+.home-container .all-scenic {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.home-container .all-scenic text {
+  color: #333;
+  font-size: 24rpx;
+  padding-right: 40rpx;
+  position: relative;
+}
+.home-container .all-scenic text::after {
+  background-image: url(https://tystatic.liuxx.com/wechat/images/right_icon.png);
+  background-size: cover;
+  bottom: 5rpx;
+  content: " ";
+  display: block;
+  height: 20rpx;
+  margin-left: 12rpx;
+  position: absolute;
+  right: 0;
+  width: 20rpx;
+}
+

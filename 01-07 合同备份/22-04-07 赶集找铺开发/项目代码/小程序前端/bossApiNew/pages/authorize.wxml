@@ -1,0 +1,25 @@
+<view class="auth-login-container">
+    <view class="head_info">
+        <view class="head_item">
+            <view class="head_img">
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+        </view>
+        <view class="nick_name head_item">
+            <view>Hi ~</view>
+            <open-data type="userNickName"></open-data>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class="authinfo">
+        <text class="info">欢迎成为{{title}}会员，请确认授权以下信息</text>
+        <text class="scope">获得您的公开信息(昵称、头像、位置等)</text>
+    </view>
+    <view class="button-view">
+        <button bindtap="getUserProfile" class="btn-bind" lang="zh_CN" wx:if="{{!showMobileBtn}}">确认授权</button>
+        <button bindgetphonenumber="getPhoneNumber" class="btn-bind" lang="zh_CN" openType="getPhoneNumber" wx:if="{{showMobileBtn}}">绑定手机号码</button>
+    </view>
+    <view class="button-view">
+        <button bindtap="cancelbind" class="btn-cancel">取消</button>
+    </view>
+</view>

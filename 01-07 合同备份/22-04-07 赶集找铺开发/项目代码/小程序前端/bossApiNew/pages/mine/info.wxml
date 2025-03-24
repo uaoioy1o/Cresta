@@ -1,0 +1,160 @@
+<view class="mine-info-container">
+    <view class="page_ad">
+        <view class="header_bg" style="background-image:url('{{ossHost}}zhuandian/wx_app/{{appName}}/bg_1.jpeg?t=123');" wx:if="{{appName}}">
+            <view class="header_title" style="line-height:{{40}}px;height:{{40}}px;width: 100%;padding-top:{{statusBarHeight}}px;"> 我的 </view>
+            <view class="header_info">
+                <view style="display: flex;align-items: center;">
+                    <view class="head_img">
+                        <open-data type="userAvatarUrl"></open-data>
+                    </view>
+                    <view class="nick_name">
+                        <view class="usernickname">
+                            <open-data type="userNickName"></open-data>
+                            <view catchtap="openProfile" class="vip" data-wpyopenprofile-a="/pages/mine/vip" style="height: 40rpx;" wx:if="{{userInfo.is_vip==1}}">
+                                <image mode="aspectFill" src="../../images/vip-icon.png" style="width:32rpx;height:32rpx"></image>
+                            </view>
+                            <view catchtap="openProfile" class="vip" data-wpyopenprofile-a="/pages/mine/vip" style="height:28rpx" wx:else>
+                                <text>升级VIP</text>
+                            </view>
+                        </view>
+                        <view class="nickphone">刷新点 : {{userInfo.refresh_point}}</view>
+                    </view>
+                </view>
+                <view catchtap="openProfile" class="credit_shop" data-wpyopenprofile-a="/pages/mine/profile">
+                    <view style="display: flex;background:rgba(255,255,255,0.9);padding: 15rpx 24rpx;border-radius: 48rpx;">
+                        <image mode="aspectFill" src="../../images/mine_icon_0.png" style="width:32rpx;height:32rpx"></image>
+                        <text class="mark right_icon" style="display: flex;align-items: center;font-size:12px;margin-left: 10rpx;">个人主页</text>
+                    </view>
+                </view>
+            </view>
+            <view style="display:flex;padding: 0 30rpx;">
+                <view catchtap="openProfile" class="dashboard_item" data-wpyopenprofile-a="/pages/mine/followList">
+                    <text class="num">{{userInfo.follow}}</text>
+                    <text class="msg">关注</text>
+                </view>
+                <view catchtap="openProfile" class="dashboard_item" data-wpyopenprofile-a="/pages/mine/shopList">
+                    <text class="num">{{userInfo.shop}}</text>
+                    <text class="msg">我的店铺</text>
+                </view>
+                <view catchtap="openProfile" class="dashboard_item" data-wpyopenprofile-a="/pages/mine/contact/foot">
+                    <text class="num">{{userInfo.footprint}}</text>
+                    <text class="msg">足迹</text>
+                </view>
+            </view>
+        </view>
+        <view class="memberBox">
+            <view catchtap="openPage" data-wpyopenpage-a="{{item}}" wx:for="{{icon}}" wx:key="item">
+                <image src="../../images/{{appName}}/{{item.icon}}.png" style="width:90rpx;height:90rpx"></image>
+                <text>{{item.title}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="mine_pannel" style="margin-bottom:24rpx">
+        <view class="column" wx:for="{{column[0]}}" wx:key="item">
+            <button plain class="share_btn sub_title" openType="share" wx:if="{{item.icon=='mine_icon_4'}}">
+                <view class="title" style="width: 100%;">
+                    <view style="display: flex;align-items: center;">
+                        <image src="../../images/{{item.icon}}.png" style="width:40rpx;height:40rpx;margin-right:10rpx"></image>
+                        <text class="sub_title">{{item.title}}</text>
+                    </view>
+                    <view class="tips">
+                        <text wx:if="{{item.tip}}">{{item.tip}}</text>
+                        <text class="right_icon"></text>
+                    </view>
+                </view>
+            </button>
+            <button plain class="share_btn sub_title" openType="contact" wx:elif="{{item.icon=='mine_icon_5'}}">
+                <view class="title" style="width: 100%;">
+                    <view style="display: flex;align-items: center;">
+                        <image src="../../images/{{item.icon}}.png" style="width:40rpx;height:40rpx;margin-right:10rpx"></image>
+                        <text class="sub_title">{{item.title}}</text>
+                    </view>
+                    <view class="tips">
+                        <text wx:if="{{item.tip}}">{{item.tip}}</text>
+                        <text class="right_icon"></text>
+                    </view>
+                </view>
+            </button>
+            <view catchtap="openPage" class="title" data-wpyopenpage-a="{{item}}" wx:else>
+                <view style="display: flex;align-items: center;">
+                    <image src="../../images/{{item.icon}}.png" style="width:40rpx;height:40rpx;margin-right:10rpx"></image>
+                    <text class="sub_title">{{item.title}}</text>
+                </view>
+                <view class="tips">
+                    <block wx:if="{{item.tip}}">
+                        <text class="sub_title" wx:if="{{item.icon!='mine_icon_2'}}">{{item.tip}}</text>
+                        <view class="sub_title" style="color:#FF9543;display: flex;align-items: center;" wx:if="{{item.icon=='mine_icon_2'}}">{{item.tip}}<view style="width:5px;height:5px;border-radius:5rpx;background:red;margin-left:5rpx" wx:if="{{userInfo.is_read==1}}"></view>
+                        </view>
+                    </block>
+                    <text class="right_icon"></text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <swiper autoplay="false" class="swiper" duration="300" indicatorDots="true" interval="3000" style="height:{{$banner$branner.length>0?'180rpx':'0'}}" wx:if="{{$banner$branner.length>0}}">
+        <swiper-item wx:for="{{$banner$branner}}" wx:key="item">
+            <view class="banner_img" style="background-image:url({{item.image_src}})"></view>
+        </swiper-item>
+    </swiper>
+    <view class="mine_pannel" style="margin-bottom:100px">
+        <view class="column" wx:for="{{column[1]}}" wx:key="item">
+            <button plain class="share_btn sub_title" openType="share" wx:if="{{item.icon=='mine_icon_4'}}">
+                <view class="title" style="width: 100%;">
+                    <view style="display: flex;align-items: center;">
+                        <image src="../../images/{{item.icon}}.png" style="width:40rpx;height:40rpx;margin-right:10rpx"></image>
+                        <text class="sub_title">{{item.title}}</text>
+                    </view>
+                    <view class="tips">
+                        <text wx:if="{{item.tip}}">{{item.tip}}</text>
+                        <text class="right_icon"></text>
+                    </view>
+                </view>
+            </button>
+            <button plain class="share_btn sub_title" openType="contact" wx:elif="{{item.icon=='mine_icon_5'}}">
+                <view class="title" style="width: 100%;">
+                    <view style="display: flex;align-items: center;">
+                        <image src="../../images/{{item.icon}}.png" style="width:40rpx;height:40rpx;margin-right:10rpx"></image>
+                        <text class="sub_title">{{item.title}}</text>
+                    </view>
+                    <view class="tips">
+                        <text wx:if="{{item.tip}}">{{item.tip}}</text>
+                        <text class="right_icon"></text>
+                    </view>
+                </view>
+            </button>
+            <view catchtap="openPage" class="title" data-wpyopenpage-a="{{item}}" wx:else>
+                <view style="display: flex;align-items: center;">
+                    <image src="../../images/{{item.icon}}.png" style="width:40rpx;height:40rpx;margin-right:10rpx"></image>
+                    <text class="sub_title">{{item.title}}</text>
+                </view>
+                <view class="tips">
+                    <text wx:if="{{item.tip}}">{{item.tip}}</text>
+                    <text class="right_icon"></text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view catchtouchmove="$create_store$true" class="rule-modal" wx:if="{{$create_store$show}}">
+        <view catchtouchmove="$create_store$preventTouchMove" class="mask">
+            <view style="position: absolute;bottom: 0;margin-bottom: 220px;width: 100%;">
+                <view catchtap="$create_store$apply" class="nav-item" data-wpyapply-a="{{item}}" wx:for="{{$create_store$menu}}" wx:key="item">
+                    <image src="../../images/{{item.icon}}.png" style="width:110rpx;height:110rpx"></image>
+                    <view style="color:#fff;margin-left:30rpx;display: flex;flex-direction: column;">
+                        <text style="font-size:16px;font-weight:500">{{item.name}}</text>
+                        <text style="font-size:12px;color:#999;margin-top:20rpx">{{item.tip}}</text>
+                    </view>
+                </view>
+            </view>
+            <view style="position: absolute;bottom: 0;margin-bottom: 80px;display: flex;width: 100%;justify-content: center;">
+                <image catchtap="$create_store$close" src="../../images/apply_close.png" style="width:110rpx;height:110rpx"></image>
+            </view>
+        </view>
+    </view>
+    <view class="tab-bar" style="background:{{$tab_bar$tabBar.backgroundColor}}">
+        <view bindtap="$tab_bar$swichNav" class="tab-item" data-current="{{index}}" data-url="{{item.pagePath}}" wx:for="{{$tab_bar$tabBar.list}}" wx:key="item">
+            <image src="../../{{$tab_bar$currentTab==index?item.selectedIconPath:item.iconPath}}" style="width:20px;height:20px;margin-bottom:5px" wx:if="{{item.text}}"></image>
+            <image src="../../{{$tab_bar$currentTab==index?item.selectedIconPath:item.iconPath}}" style="width:40px;height:40px;" wx:else></image>
+            <text class="item-bottom" style="color:{{$tab_bar$currentTab==index?$tab_bar$tabBar.selectedColor:$tab_bar$tabBar.color}}"> {{item.text}}</text>
+        </view>
+    </view>
+</view>

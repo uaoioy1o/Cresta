@@ -1,0 +1,11 @@
+<view class="order-list-container">
+    <view class="goods_list">
+        <!-- 如果没有服务器记录，返回空页面 -->
+        <view class="empty-content" wx:if="{{dataSource.length==0}}">
+            <view class="empty-card">
+                <image class="er-code-status" src="../../images/empty.png"></image>
+                <text class="empty-no">暂无服务记录</text>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+
+Some of the code in the following folder will throw up errors which are easy to fix.
+They are because of the different versions of Python and deprecated functionality.
+
+folder:-
+hadoop_spark/spark/pyspark-notebooks/spark-py-notebooks
+files:-
+nb1-9
+
+(1)
+print XXX -> print(XXX)
+
+(2)
+AttributeError: module 'urllib' has no attribute 'urlretrieve'
+
+#import urllib
+#f = urllib.urlretrieve ("http://kdd.ics.uci.edu/databases/kddcup99/kddcup.data_10_percent.gz", "kddcup.data_10_percent.gz")
+
+url="http://kdd.ics.uci.edu/databases/kddcup99/kddcup.data_10_percent.gz"
+file="kddcup.data_10_percent.gz"
+import urllib.request
+f = urllib.request.urlretrieve(url,file)

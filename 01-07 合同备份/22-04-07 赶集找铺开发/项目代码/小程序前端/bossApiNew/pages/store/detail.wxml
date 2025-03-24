@@ -1,0 +1,232 @@
+<view class="scenic-list-container">
+    <view class="custom-header" style="height:{{$custom_header$statusBarHeight+$custom_header$headerHeight}}px;background-color:{{$custom_header$backgroundColor}}">
+        <view class="header-img" style="padding-top:{{$custom_header$statusBarHeight}}px;">
+            <view style="width:100px">
+                <image catchtap="$custom_header$goBack" class="icon" mode="heightFix" src="../../images/{{$custom_header$icon}}.png" wx:if="{{$custom_header$icon}}"></image>
+            </view>
+            <view class="header_title"> {{$custom_header$title}} </view>
+            <view style="width:100px"></view>
+        </view>
+    </view>
+    <view class="banner" wx:if="{{tourDetail.shop_type!=3}}">
+        <swiper autoplay="{{autoplay}}" class="swiper_banner" duration="1000" interval="3000">
+            <swiper-item wx:if="{{tourDetail.shop_images.length>0}}" wx:for="{{tourDetail.shop_images}}" wx:for-index="idx" wx:key="idx">
+                <image class="scenic_cover" mode="aspectFill" src="{{item}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="content" style="{{tourDetail.shop_type==3?'padding-top:'+statusBarHeight+headerHeight+12+'px':''}}">
+        <view class="info-view">
+            <view style="display:flex;justify-content: space-between;">
+                <view class="main_title">
+                    <text class="tip" wx:if="{{tourDetail.is_new==1}}">上新</text>
+                    <text class="tip" wx:if="{{tourDetail.is_new==0&&tourDetail.is_recommend==1}}">置顶</text> {{tourDetail.title}}</view>
+                <button class="share_btn" openType="share">
+                    <view class="btn_view">
+                        <image src="../../images/share.png" style="width:36rpx;height:36rpx;"></image>
+                        <text class="primary_text">分享</text>
+                    </view>
+                </button>
+            </view>
+            <view class="tag" wx:if="{{tourDetail.lable_list.length>0}}">
+                <text style="{{index==0?'color:#FD4C38;border-color:#FD4C38':index==1?'color:#4B97E7;border-color:#4B97E7':'color:#FDBC17;border-color:#FDBC17'}}" wx:for="{{tourDetail.lable_list}}" wx:for-item="tag" wx:key="tag">{{tag}}</text>
+            </view>
+            <view class="price">
+                <view>
+                    <text class="num">{{tourDetail.rent_money}}<text>元/月</text>
+                    </text>
+                    <text class="msg">租金</text>
+                </view>
+                <view>
+                    <text class="num">{{tourDetail.area_size}}<text>㎡</text>
+                    </text>
+                    <text class="msg">面积</text>
+                </view>
+                <view wx:if="{{tourDetail.shop_type==2}}">
+                    <text class="num">{{tourDetail.transfer_fee=='面议'?'面议':tourDetail.transfer_fee/10000+' '}}<text>{{tourDetail.transfer_fee=='面议'?'':'万元'}}</text>
+                    </text>
+                    <text class="msg">转让费</text>
+                </view>
+                <view wx:if="{{tourDetail.shop_type==3}}">
+                    <text class="num">{{tourDetail.estimated_investment_money}}<text>元</text>
+                    </text>
+                    <text class="msg">预计投资</text>
+                </view>
+            </view>
+            <view class="detail_notice">
+                <text>区域：{{tourDetail.city_name}}-{{tourDetail.area_name}}</text>
+                <text wx:if="{{tourDetail.shop_type!=3}}">店铺类型：{{tourDetail.shop_lable_name}}</text>
+                <text wx:if="{{tourDetail.shop_type==3}}">经营行业：{{tourDetail.shop_trade||'--'}}</text>
+            </view>
+        </view>
+        <view class="detail">
+            <view class="pannel">
+                <view class="pannel-title">
+                    <text class="main-title">咨询</text>
+                </view>
+                <view class="pannel-body">
+                    <view class="section" style="display:flex">
+                        <textarea bindinput="bindTextAreaBlur" placeholder="喜欢就留言，问问更多细节~" style="border: 1px solid #E4E4E4;height: 60px;border-radius: 5px;padding: 5px;flex:1;margin-right:10px" value="{{consult}}"></textarea>
+                        <view catchtap="handleSaveConsult" style="width: 70px;height: 72px;background: #FFF8EE;border-radius: 4px;line-height: 72px;text-align: center;color: #FF9543;">发送</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view catchtap="openProfile" class="detail" wx:if="{{tourDetail.wechat_info.headimgurl&&tourDetail.wechat_info.nickname}}">
+            <view class="pannel">
+                <view class="pannel-body">
+                    <view class="header_info">
+                        <view style="display: flex;align-items: center;">
+                            <view class="head_img" style="background-image:url('{{tourDetail.wechat_info.headimgurl}}')"></view>
+                            <view class="nick_name">
+                                <view class="usernickname">{{tourDetail.wechat_info.nickname}}</view>
+                                <view class="nickphone">最新更新时间 : {{tourDetail.updated_at}}</view>
+                            </view>
+                        </view>
+                        <view class="credit_shop">
+                            <view style="display: flex;background:rgba(255,255,255,0.9);border-radius: 48rpx;">
+                                <text class="mark right_icon" style="display: flex;align-items: center;font-size:12px;margin-left: 10rpx;"></text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="detail" wx:if="{{tourDetail.shop_type!=3}}">
+            <view class="pannel">
+                <view class="pannel-title">
+                    <text class="main-title">店铺介绍</text>
+                </view>
+                <view class="pannel-body">
+                    <rich-text class="detail_body" nodes="{{tourDetail.details}}"></rich-text>
+                    <view style="color:red;font-weight:500;padding:12rpx 0">联系我时，一定请说明是在{{name}}看到的</view>
+                    <view style="color:#999;font-size:12px">声明：本信息来自用户提供，如有侵权，请联系平台删除</view>
+                </view>
+            </view>
+        </view>
+        <view class="detail">
+            <view class="pannel">
+                <view class="pannel-title">
+                    <text class="main-title">猜你喜欢</text>
+                </view>
+                <view class="pannel-body">
+                    <view style="border-bottom: 1rpx solid #F2F3F4;{{$store_item$btnType=='foot'?'background: #fff;padding: 24rpx;margin-bottom: 24rpx;':''}}" wx:for="{{tourDetail.recommend_list}}" wx:key="item">
+                        <view style="display: flex;align-items: center;" wx:if="{{$store_item$btnType=='foot'}}">
+                            <image src="../../images/clock.png" style="width:32rpx;height:32rpx;margin-right:6rpx"></image>
+                            <text>访问时间：{{item.visit_at}}</text>
+                        </view>
+                        <view catchtap="$store_item$navDetail" class="tour-item" data-com-index="{{undefined}}" data-wpynavdetail-a="{{item}}">
+                            <view class="thumb" style="background-image:url({{item.shop_images&&item.shop_images.length>0&&item.shop_images[0]}})" wx:if="{{item.shop_type!=3}}">
+                                <view class="bread" wx:if="{{item.is_recommend==1}}">置顶</view>
+                                <view class="bread" wx:if="{{item.is_recommend==0&&item.is_new==1}}">上新</view>
+                            </view>
+                            <view class="info" style="padding-left:0" wx:if="{{item.shop_type==3&&$store_item$btnType!='store'}}">
+                                <view>
+                                    <view class="title">
+                                        <text>{{item.title}}</text>
+                                        <text class="tag">{{$store_item$appName}}认证</text>
+                                    </view>
+                                    <text style="color: #999;font-size:26rpx">{{item.content}}</text>
+                                </view>
+                                <view style="display: flex;">
+                                    <view>
+                                        <image src="{{item.head_image}}" style="border-radius: 20px;width: 40px;height: 40px;margin-top: 10px;margin-right: 10px;"></image>
+                                    </view>
+                                    <view style="width: 100%;">
+                                        <view class="label" style="margin-top:10px">
+                                            <text class="label-distance" style="font-size:26rpx">联系人：{{item.name}}</text>
+                                            <text class="label-distance" style="font-size:26rpx"></text>
+                                        </view>
+                                        <view class="label" style="margin-top:10px" wx:if="{{item.dateItem}}">
+                                            <text class="label-distance" style="font-size:26rpx">活跃时间：{{item.dateItem}}</text>
+                                            <text class="label-distance" style="font-size:26rpx"></text>
+                                        </view>
+                                        <view class="label" style="margin-top:10px;display: flex;">
+                                            <text class="label-distance" style="font-size:26rpx">联系电话：{{item.phone}}</text>
+                                            <text class="label-distance chat" style="font-size:26rpx" wx:if="{{!item.chat}}">点击咨询 ></text>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="info" wx:if="{{$store_item$btnType=='store'||$store_item$btnType!='store'&&item.shop_type!=3}}">
+                                <view>
+                                    <view class="title">
+                                        <text>{{item.title}}</text>
+                                    </view>
+                                    <view class="info-des" wx:if="{{item.city_name}}"> {{item.city_name+'-'+item.area_name}} | {{item.area_size}} ㎡ </view>
+                                    <view class="info-tags">
+                                        <text style="{{index==0?'color:#FD4C38;border-color:#FD4C38':index==1?'color:#4B97E7;border-color:#4B97E7':'color:#FDBC17;border-color:#FDBC17'}}" wx:for="{{item.lable_list}}" wx:for-item="tag" wx:key="tag">{{tag}}</text>
+                                    </view>
+                                </view>
+                                <view class="label">
+                                    <view>
+                                        <text class="price">
+                                            <text class="money">{{item.rent_money}}</text>元/月 </text>
+                                    </view>
+                                    <text class="label-distance">更新时间：{{item.updated_at}}</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="tour-bottom" wx:if="{{$store_item$bottom=='show'&&item.shop_type!=3}}">
+                            <view>
+                                <image catchtap="$store_item$openProfile" data-com-index="{{undefined}}" data-wpyopenprofile-a="{{headImg}}" src="{{headImg.headimgurl}}" style="width:48rpx;height:48rpx;border-radius:24rpx" wx:for="{{item.consultant_list}}" wx:for-item="headImg" wx:key="headImg"></image>
+                            </view>
+                            <view class="right_icon" style="display: flex;align-items: center;">{{item.consultant_count>1000?'1000+':item.consultant_count}}人已咨询</view>
+                        </view>
+                        <view class="tour-bottom btn-area" wx:if="{{$store_item$btnType=='follow'}}">
+                            <text catchtap="$store_item$handleCancel" data-com-index="{{undefined}}" data-wpyhandlecancel-a="{{item}}">取消关注</text>
+                            <text catchtap="$store_item$handleCallPhone" data-com-index="{{undefined}}" data-wpyhandlecallphone-a="{{item}}">电话咨询</text>
+                        </view>
+                        <view class="tour-bottom btn-area" wx:if="{{$store_item$btnType=='store'}}">
+                            <block wx:if="{{item.pay_status==2}}">
+                                <view style="font-size:12px;color:red">请在一小时内完成支付</view>
+                                <text catchtap="$store_item$handlePay" data-com-index="{{undefined}}" data-wpyhandlepay-a="{{item}}">继续支付</text>
+                            </block>
+                            <text catchtap="$store_item$handleDelete" data-com-index="{{undefined}}" data-wpyhandledelete-a="{{item}}" wx:if="{{item.pay_status!=1&&item.shop_type!=3}}">删除</text>
+                            <block wx:if="{{item.pay_status==1}}">
+                                <text catchtap="$store_item$handleEdit" data-com-index="{{undefined}}" data-wpyhandleedit-a="{{item}}">编辑</text>
+                                <text catchtap="$store_item$handleUp" data-com-index="{{undefined}}" data-wpyhandleup-a="{{item}}" wx:if="{{item.status==2}}">上架</text>
+                                <block wx:if="{{item.status==1}}">
+                                    <text catchtap="$store_item$handleUp" data-com-index="{{undefined}}" data-wpyhandleup-a="{{item}}">下架</text>
+                                    <block wx:if="{{item.shop_type!=3}}">
+                                        <text catchtap="$store_item$handleService" data-com-index="{{undefined}}" data-wpyhandleservice-a="refresh" data-wpyhandleservice-b="{{item}}">刷新</text>
+                                        <text catchtap="$store_item$handleService" data-com-index="{{undefined}}" data-wpyhandleservice-a="match" data-wpyhandleservice-b="{{item}}">匹配</text>
+                                        <text catchtap="$store_item$handleService" data-com-index="{{undefined}}" data-wpyhandleservice-a="top" data-wpyhandleservice-b="{{item}}">置顶</text>
+                                    </block>
+                                </block>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="footer">
+        <view class="btn_area">
+            <view catchtap="openHomePage" class="icon">
+                <image src="../../images/home1.png"></image>
+                <text>首页</text>
+            </view>
+            <view catchtap="handleFollow" class="icon">
+                <block wx:if="{{tourDetail.is_follow==1}}">
+                    <image src="../../images/fav-fill.png"></image>
+                    <text>取消关注</text>
+                </block>
+                <block wx:else>
+                    <image src="../../images/fav.png"></image>
+                    <text>关注</text>
+                </block>
+            </view>
+            <button class="icon" openType="contact">
+                <image src="../../images/customer-service.png"></image>
+                <text>客服</text>
+            </button>
+        </view>
+        <view class="btn_area">
+            <button catchtap="handleCallPhone" class="goyuyue" type="default">
+                <image src="../../images/yuyue/yuyue_icon.png"></image>
+                <text>电话咨询</text>
+            </button>
+        </view>
+    </view>
+</view>

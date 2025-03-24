@@ -1,0 +1,5 @@
+<view class="problem" wx:for="{{problems}}" wx:key="index">
+    <view class="pro-box">
+        <rich-text nodes="{{item.detail}}"></rich-text>
+    </view>
+</view>

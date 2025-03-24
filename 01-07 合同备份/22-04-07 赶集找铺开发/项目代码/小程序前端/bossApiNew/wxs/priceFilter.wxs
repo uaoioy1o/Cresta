@@ -1,0 +1,8 @@
+var sub = (function(item, pay_amount) {
+    if (item.type == 2) {
+        return (item.amount ? (pay_amount * item.amount * 1).toFixed(2) : pay_amount.toFixed(2))
+    } else {
+        return (item.amount ? (pay_amount - item.amount).toFixed(2) : pay_amount.toFixed(2))
+    }
+});
+module.exports.sub = sub;

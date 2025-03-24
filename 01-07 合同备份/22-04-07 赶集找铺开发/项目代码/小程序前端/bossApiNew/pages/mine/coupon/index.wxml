@@ -1,0 +1,66 @@
+<view class="order-list-container">
+    <view class="goods_list">
+        <view catchtap="handleCancelConpon" class="add_concat">
+            <text>不使用优惠券</text>
+            <image src="../../../images/{{!selectedCoupon.discount_sn?'confirm':'circle'}}.png" style="width:36rpx;height:36rpx;"></image>
+        </view>
+        <view class="coupon-cell-container" style="opacity:{{item.type==1&&pay_amount<=item.amount||item.type!=type?'0.4':1}}" wx:for="{{couponList}}" wx:key="item">
+            <view class="item-coupon-cell-container" wx:if="{{1==0}}">
+                <view class="item-coupon-left">
+                    <view wx:if="{{item.type==1}}">
+                        <text style="font-size:32rpx;color:#fff;">¥</text>
+                        <text style="font-size:50rpx;color:#fff;">{{item.reduce_cost/100}}</text>
+                    </view>
+                    <text style="font-size:20rpx;color:#fff;" wx:if="{{item.card_type=='CASH'}}">满{{item.least_cost/100}}元使用</text>
+                    <text style="font-size:32rpx;color:#fff;" wx:if="{{item.card_type=='GIFT'}}">兑换券</text>
+                </view>
+                <view class="item-coupon-right">
+                    <view style="margin-top:20rpx;display:flex;align-items:center;">
+                        <text style="font-size:24rpx;color:#2FACFC;padding:0 10rpx;border:1rpx solid #2FACFC;border-radius:5rpx;margin-left:20rpx;">{{item.relate_release_type==2?'门票':'酒店'}}</text>
+                        <text style="font-size:32rpx;color:#333;margin-left:20rpx;">{{item.title}}</text>
+                    </view>
+                    <text style="font-size:24rpx;color:#999;margin-top:15rpx;margin-left:20rpx;">{{item.begin_time&&item.end_time?item.begin_time+'至'+item.begin_time:'.'}}</text>
+                    <view style="width:100%;margin-top:10rpx;display:flex;justify-content:space-between;align-items:center;">
+                        <text style="margin-left:20rpx;font-size:24rpx;color:#999;">详细说明 ^</text>
+                        <text catchtap="$couponItem$takeCoupon" data-com-index="{{undefined}}" data-wpytakecoupon-a="{{item}}" style="background:#2FACFC;width:150rpx;height:52rpx;color:#fff;border-radius:26rpx;text-align:center;line-height:52rpx;font-size:24rpx;margin-right:20rpx;" wx:if="{{item.is_own!=1}}">立即领取</text>
+                        <text catchtap="$couponItem$takeCoupon" data-com-index="{{undefined}}" data-wpytakecoupon-a="{{item}}" style="background:#fff;width:150rpx;height:52rpx;color:#2FACFC;border-radius:26rpx;border: 1rpx #2FACFC solid;text-align:center;line-height:52rpx;font-size:24rpx;margin-right:20rpx;" wx:if="{{item.is_own==1}}">立即使用</text>
+                    </view>
+                    <view class="item-coupon-status" wx:if="{{item.is_own==1}}">
+                        <text style="font-size:18rpx;color:#fff;margin-bottom:5rpx;">已领取</text>
+                    </view>
+                </view>
+            </view>
+            <view class="item-coupon-cell-container">
+                <view class="item-coupon-left">
+                    <view wx:if="{{item.type==1}}">
+                        <text style="font-size:32rpx;color:#fff;">¥</text>
+                        <text style="font-size:50rpx;color:#fff;">{{item.amount}}</text>
+                    </view>
+                    <view wx:if="{{item.type==2}}">
+                        <text style="font-size:50rpx;color:#fff;">{{item.amount*10}}</text>
+                        <text style="font-size:32rpx;color:#fff;">折</text>
+                    </view>
+                </view>
+                <view catchtap="$couponItem$handleClickCoupon" class="item-coupon-right" data-com-index="{{undefined}}" data-wpyhandleclickcoupon-a="{{item}}">
+                    <view style="display: flex;flex: 1;flex-direction: column;">
+                        <view style="display:flex;align-items:center;">
+                            <text style="font-size:32rpx;color:#333;margin-left:20rpx;">{{item.type_name}}</text>
+                        </view>
+                        <text style="font-size:24rpx;color:#999;margin-top:15rpx;margin-left:20rpx;">有效期：{{item.effective_start&&item.effective_end?item.effective_start+'至'+item.effective_end:'.'}}</text>
+                        <view style="width:100%;margin-top:10rpx;display:flex;justify-content:space-between;align-items:center;">
+                            <text style="margin-left:20rpx;font-size:24rpx;color:#999;" wx:if="{{item.type==1&&pay_amount<=item.amount}}">不可用，优惠券金额大于支付金额 </text>
+                        </view>
+                    </view>
+                    <image src="../../../../../../../images/{{selectedCoupon.discount_sn==item.discount_sn?'confirm':'circle'}}.png" style="width:36rpx;height:36rpx;margin-right:24rpx"></image>
+                </view>
+            </view>
+        </view>
+        <view class="empty-content" wx:if="{{couponList.length==0}}">
+            <view class="empty-card">
+                <image class="er-code-status" src="../../../images/empty.png"></image>
+                <text class="empty-no">{{$empty$title}}</text>
+            </view>
+        </view>
+    </view>
+    <button catchtap="handleConfirm" class="button_submit"> 确定 </button>
+</view>

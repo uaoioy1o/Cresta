@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单内容</title>
+</head> 
+<body>
+    <form method="post" action="/api/handleimage/" enctype="multipart/form-data"> 
+    {% csrf_token %} 
+    <input type="file" name="image"><br> 
+    <input type="submit" value="提交"> 
+    </form> 
+</body> 
+</html>

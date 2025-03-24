@@ -1,0 +1,10 @@
+{
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "tab-bar": "/components/TabBar",
+    "store-item": "/components/StoreItem",
+    "create-store": "/components/CreateStore",
+    "recommend-item": "/components/RecommendItem"
+  }
+}

@@ -1,0 +1,44 @@
+<view class="container">
+    <view>
+        <image mode="widthFix" src="{{ossHost}}zhuandian/wx_app/top.jpg" style="width:calc(100vw)"></image>
+    </view>
+    <view class="detail">
+        <view class="pannel">
+            <view class="pannel-title">
+                <text class="main-title">选择服务</text>
+            </view>
+            <view class="pannel-body" style="padding-bottom:24rpx">
+                <view catchtap="navDetail" class="{{currentId==index?'active':''}} container_input_item times" data-wpynavdetail-a="{{index}}" wx:for="{{dataSource}}" wx:key="item">
+                    <view style="display: flex;align-items: center;">
+                        <text>{{item.id}}天</text>
+                    </view>
+                    <view style=" display: flex;align-items: center;"> ￥{{item.price}} </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="detail">
+        <view catchtap="handleCoupon" class="pannel" style="padding:24rpx 24rpx 24rpx 0">
+            <view class="pannel-title" style="border:none;padding-right: 0;display: flex;justify-content: space-between;">
+                <view class="main-title">
+                    <text>优惠券</text>
+                </view>
+                <text class="right_icon" style="display: flex;align-items: center;color:rgba(253,76,56,1);" wx:if="{{selectedCoupon.type==2}}">{{selectedCoupon.amount*10}}{{selectedCoupon.amount?'折':''}}{{selectedCoupon.type_name}}</text>
+                <text class="right_icon" style="display: flex;align-items: center;color:rgba(253,76,56,1);" wx:if="{{selectedCoupon.type!=2}}">{{selectedCoupon.amount}}{{selectedCoupon.amount?'元':''}}{{selectedCoupon.type_name}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="detail">
+        <view class="pannel">
+            <view class="pannel-body" style="padding:24rpx">
+                <view class="container_input_item" style="height:60px;flex-direction: column;color:#FF9543">
+                    <text style="width:100%;color:#FF9543;height: 20px;">店铺曝光度越高，店铺会获得更多曝光度</text>
+                    <text style="width:100%;color:#FF9543;height: 20px;">每支付1元可以获得1个刷新点</text>
+                    <text style="width:100%;color:#FF9543;height: 20px;">刷新点可用于购买店铺刷新服务</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <button catchtap="submit" class="button_submit"> 确定 </button>
+</view>
+<wxs module="tag" src="../../wxs/tagFilter.wxs" />

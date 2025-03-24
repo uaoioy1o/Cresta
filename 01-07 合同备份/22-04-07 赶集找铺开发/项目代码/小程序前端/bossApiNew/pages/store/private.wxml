@@ -1,0 +1,6 @@
+<view class="article-container">
+    <view class="content">
+        <view class="title">{{articleData.title}}</view>
+        <rich-text nodes="{{articleDatabody}}" style="line-height: 1.5;"></rich-text>
+    </view>
+</view>

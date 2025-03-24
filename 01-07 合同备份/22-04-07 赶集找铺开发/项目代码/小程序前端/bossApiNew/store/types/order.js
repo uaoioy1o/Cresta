@@ -1,0 +1,5 @@
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+});
+
+var GET_ORDER_LIST = exports.GET_ORDER_LIST = "GET_ORDER_LIST", GET_ORDER_DETAIL = exports.GET_ORDER_DETAIL = "GET_ORDER_DETAIL", CANCEL_ORDER = exports.CANCEL_ORDER = "CANCEL_ORDER", CONFIRM_ORDER = exports.CONFIRM_ORDER = "CONFIRM_ORDER", SEND_SMS = exports.SEND_SMS = "SEND_SMS", BIND_PHONE = exports.BIND_PHONE = "BIND_PHONE";

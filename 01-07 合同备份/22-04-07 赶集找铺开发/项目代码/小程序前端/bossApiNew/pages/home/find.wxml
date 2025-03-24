@@ -1,0 +1,66 @@
+<view class="home-container">
+    <view style="position: fixed;z-index: 10;background: #fff;height:{{statusBarHeight+headerHeight}}px;top: 0;width: 100%;">
+        <view style="margin-top:{{statusBarHeight}}px;height:{{headerHeight}}px;display: flex;align-items: center;padding:0 24rpx">
+            <image catchtap="goBack" mode="heightFix" src="../../images/arrow_left_gray.png" style="width:40rpx;height:40rpx"></image>
+            <view style="font-weight:500;padding:0 10rpx;font-size:16px;font-weight:500">累积{{title}}</view>
+            <view class="search"></view>
+        </view>
+    </view>
+    <view class="pannel" style="margin-top:{{statusBarHeight+headerHeight}}px;padding-bottom:200rpx">
+        <swiper autoplay="false" class="swiper" duration="300" indicatorDots="true" interval="3000" style="height:{{$banner$branner.length>0?'180rpx':'0'}}" wx:if="{{type==2}}">
+            <swiper-item wx:for="{{$banner$branner}}" wx:key="item">
+                <view class="banner_img" style="background-image:url({{item.image_src}})"></view>
+            </swiper-item>
+        </swiper>
+        <swiper autoplay="false" class="swiper" duration="300" indicatorDots="true" interval="3000" style="height:{{$banner$branner.length>0?'180rpx':'0'}}" wx:if="{{type==3}}">
+            <swiper-item wx:for="{{$banner$branner}}" wx:key="item">
+                <view class="banner_img" style="background-image:url({{item.image_src}})"></view>
+            </swiper-item>
+        </swiper>
+        <view class="pannel-body">
+            <view style="border-bottom: 1rpx solid #F2F3F4;" wx:for="{{dataSource}}" wx:key="item">
+                <view class="tour-item">
+                    <view class="info" style="padding-left:0">
+                        <view>
+                            <view class="title">
+                                <text>{{item.title}}</text>
+                            </view>
+                            <view class="info-des" wx:if="{{item.trade_name}}"> {{item.trade_name}} | {{item.area_size?item.area_size+' ㎡':'不限'}} </view>
+                        </view>
+                        <view class="label">
+                            <text class="label-distance" style="font-size:26rpx">发布时间：{{item.date_at}}</text>
+                            <text class="label-distance" style="font-size:26rpx" wx:if="{{item.handle_at}}">成交时间：{{item.handle_at}}</text>
+                        </view>
+                        <view class="label" style="margin-top: 12rpx;">
+                            <text class="label-distance" style="font-size:26rpx">联系人：{{item.name}}</text>
+                            <text class="label-distance" style="font-size:26rpx">联系电话：{{item.phone}}</text>
+                        </view>
+                        <image src="../../images/{{item.handle_at?'zhuandian':'find'}}.png" style="width:144rpx;height:144rpx;position: absolute;right: 0; opacity: .2;"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="empty-content" wx:if="{{dataSource.length==0}}">
+                <view class="empty-card">
+                    <image class="er-code-status" src="../../images/empty.png"></image>
+                    <text class="empty-no">{{$empty$title}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view catchtouchmove="$create_store$true" class="rule-modal" wx:if="{{$create_store$show}}">
+        <view catchtouchmove="$create_store$preventTouchMove" class="mask">
+            <view style="position: absolute;bottom: 0;margin-bottom: 220px;width: 100%;">
+                <view catchtap="$create_store$apply" class="nav-item" data-wpyapply-a="{{item}}" wx:for="{{$create_store$menu}}" wx:key="item">
+                    <image src="../../images/{{item.icon}}.png" style="width:110rpx;height:110rpx"></image>
+                    <view style="color:#fff;margin-left:30rpx;display: flex;flex-direction: column;">
+                        <text style="font-size:16px;font-weight:500">{{item.name}}</text>
+                        <text style="font-size:12px;color:#999;margin-top:20rpx">{{item.tip}}</text>
+                    </view>
+                </view>
+            </view>
+            <view style="position: absolute;bottom: 0;margin-bottom: 80px;display: flex;width: 100%;justify-content: center;">
+                <image catchtap="$create_store$close" src="../../images/apply_close.png" style="width:110rpx;height:110rpx"></image>
+            </view>
+        </view>
+    </view>
+</view>

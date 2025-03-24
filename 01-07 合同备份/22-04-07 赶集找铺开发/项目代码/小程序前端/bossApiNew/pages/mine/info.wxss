@@ -1,0 +1,307 @@
+.swiper {
+    height: 180rpx;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    width: calc(100vw - 48rpx);
+}
+
+.swiper .banner_img {
+    background-size: cover;
+    border-radius: 12rpx;
+    height: 100%;
+    width: 100%;
+}
+
+.main-title {
+    font-size: 32rpx;
+}
+
+.pannel .pannel-title {
+    font-weight: 500;
+    padding: 24rpx;
+}
+
+.pannel .pannel-body {
+    padding: 24rpx;
+}
+
+view {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1;
+}
+
+.right_icon:after {
+    background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    width: 20rpx;
+}
+
+.rule-modal .mask {
+    background-color: rgba(0,0,0,.9);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.rule-modal .nav-item {
+    align-items: center;
+    display: flex;
+    padding: 35rpx 120rpx;
+}
+
+.tab-bar {
+    border-top: 1rpx solid #f2f3f4;
+    bottom: 0;
+    display: flex;
+    height: 49px;
+    padding-bottom: env(safe-area-inset-bottom);
+    position: fixed;
+    width: calc(100vw);
+}
+
+.tab-bar .tab-item {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tab-bar .tab-item .item-bottom {
+    font-size: 20rpx;
+    font-weight: 500;
+}
+
+.main-title {
+    font-size: 32rpx;
+}
+
+.pannel .pannel-title {
+    font-weight: 500;
+    padding: 24rpx;
+}
+
+.pannel .pannel-body {
+    padding: 24rpx;
+}
+
+view {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1;
+}
+
+.right_icon:after {
+    background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    width: 20rpx;
+}
+
+page {
+    background-color: #f8f8f8;
+}
+
+.mine-info-container {
+    padding-bottom: 10rpx;
+}
+
+.mine-info-container .page_ad .header_bg {
+    background-size: cover;
+    height: 420rpx;
+}
+
+.mine-info-container .page_ad .header_bg .header_title {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.mine-info-container .page_ad .header_bg .header_info {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30rpx 30rpx;
+}
+
+.mine-info-container .page_ad .header_bg .header_info .head_img {
+    border-radius: 27px;
+    height: 54px;
+    overflow: hidden;
+    width: 54px;
+}
+
+.mine-info-container .page_ad .header_bg .header_info .nick_name {
+    padding: 0 24rpx;
+}
+
+.mine-info-container .page_ad .header_bg .header_info .nick_name .usernickname {
+    align-items: center;
+    color: #333;
+    display: flex;
+    font-size: 36rpx;
+}
+
+.mine-info-container .page_ad .header_bg .header_info .nick_name .vip {
+    color: #333;
+    display: flex;
+    font-size: 24rpx;
+    margin-left: 6rpx;
+}
+
+.mine-info-container .page_ad .header_bg .header_info .nick_name .vip text {
+    border: 1rpx solid #333;
+    border-radius: 5rpx;
+    padding: 1rpx 5rpx;
+}
+
+.mine-info-container .page_ad .header_bg .header_info .nick_name .nickphone {
+    color: #333;
+    font-size: 24rpx;
+    margin-top: 20rpx;
+}
+
+.mine-info-container .page_ad .header_bg .data_info {
+    display: flex;
+}
+
+.mine-info-container .page_ad .header_bg .data_info view {
+    color: #333;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.mine-info-container .page_ad .header_bg .data_info view text {
+    text-align: center;
+}
+
+.mine-info-container .page_ad .header_bg .dashboard_item {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.mine-info-container .page_ad .header_bg .dashboard_item .num {
+    color: #333;
+    font-size: 32rpx;
+    font-weight: 500;
+}
+
+.mine-info-container .page_ad .header_bg .dashboard_item .msg {
+    border-right: 1rpx solid #999;
+    color: #333;
+    font-size: 22rpx;
+    margin-top: 10rpx;
+    text-align: center;
+    width: 100%;
+}
+
+.mine-info-container .page_ad .header_bg .dashboard_item:last-child .msg {
+    border-right: none;
+}
+
+.mine-info-container .page_ad .header_bg .openMember {
+    color: #666;
+    display: flex;
+    margin-left: auto;
+    padding: 26rpx 0;
+}
+
+.mine-info-container .page_ad .header_bg .openMember.right_icon:after {
+    margin-top: 10rpx;
+}
+
+.mine-info-container .page_ad .memberBox {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -15px 30rpx 0;
+    padding: 30rpx;
+}
+
+.mine-info-container .page_ad .memberBox view {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.mine-info-container .page_ad .memberBox view text {
+    padding-top: 10px;
+}
+
+.mine-info-container .page_ad .home_bg {
+    background-size: cover;
+    border-radius: 30rpx;
+    height: 100%;
+    margin: 0 10px;
+}
+
+.mine-info-container .header {
+    background-color: #2facfb;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.mine-info-container .header .header-img {
+    align-items: center;
+    display: flex;
+    height: 44px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.mine-info-container .mine_pannel {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 30rpx 30rpx 0;
+}
+
+.mine-info-container .mine_pannel .column .title {
+    align-items: center;
+    border-bottom: 1px solid hsla(0,0%,89%,.38);
+    display: flex;
+    justify-content: space-between;
+    line-height: 42rpx;
+    padding: 30rpx 20rpx;
+}
+
+.mine-info-container .mine_pannel .column .title text {
+    line-height: 24px;
+}
+
+.mine-info-container .mine_pannel .column .tips {
+    align-items: center;
+    color: #ff9543;
+    display: flex;
+    font-size: 24rpx;
+}
+
+.mine-info-container .mine_pannel .column .share_btn {
+    align-items: center;
+    border: none;
+    display: flex;
+    font-size: 28rpx;
+    line-height: 23px;
+    margin-left: 0;
+    padding: 0;
+    text-align: left;
+}

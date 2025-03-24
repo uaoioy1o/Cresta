@@ -1,0 +1,117 @@
+<view class="order-list-container">
+    <view class="nav">
+        <view catchtap="openPage" class="type" data-wpyopenpage-a="{{item.value}}" wx:for="{{goodsType}}" wx:key="item">
+            <text class=" {{currentType==item.value?'active':''}}">{{item.name}}</text>
+        </view>
+    </view>
+    <view class="goods_list">
+        <swiper autoplay="false" class="swiper" duration="300" indicatorDots="true" interval="3000" style="height:{{$banner$branner.length>0?'180rpx':'0'}}" wx:if="{{currentType==1}}">
+            <swiper-item wx:for="{{$banner$branner}}" wx:key="item">
+                <view class="banner_img" style="background-image:url({{item.image_src}})"></view>
+            </swiper-item>
+        </swiper>
+        <swiper autoplay="false" class="swiper" duration="300" indicatorDots="true" interval="3000" style="height:{{$banner$branner.length>0?'180rpx':'0'}}" wx:if="{{currentType==2}}">
+            <swiper-item wx:for="{{$banner$branner}}" wx:key="item">
+                <view class="banner_img" style="background-image:url({{item.image_src}})"></view>
+            </swiper-item>
+        </swiper>
+        <swiper autoplay="false" class="swiper" duration="300" indicatorDots="true" interval="3000" style="height:{{$banner$branner.length>0?'180rpx':'0'}}" wx:if="{{currentType==3}}">
+            <swiper-item wx:for="{{$banner$branner}}" wx:key="item">
+                <view class="banner_img" style="background-image:url({{item.image_src}})"></view>
+            </swiper-item>
+        </swiper>
+        <view style="border-bottom: 1rpx solid #F2F3F4;{{$store_item$btnType=='foot'?'background: #fff;padding: 24rpx;margin-bottom: 24rpx;':''}}" wx:for="{{dataSource}}" wx:key="item">
+            <view style="display: flex;align-items: center;" wx:if="{{$store_item$btnType=='foot'}}">
+                <image src="../../images/clock.png" style="width:32rpx;height:32rpx;margin-right:6rpx"></image>
+                <text>访问时间：{{item.visit_at}}</text>
+            </view>
+            <view catchtap="$store_item$navDetail" class="tour-item" data-com-index="{{undefined}}" data-wpynavdetail-a="{{item}}">
+                <view class="thumb" style="background-image:url({{item.shop_images&&item.shop_images.length>0&&item.shop_images[0]}})" wx:if="{{item.shop_type!=3}}">
+                    <view class="bread" wx:if="{{item.is_recommend==1}}">置顶</view>
+                    <view class="bread" wx:if="{{item.is_recommend==0&&item.is_new==1}}">上新</view>
+                </view>
+                <view class="info" style="padding-left:0" wx:if="{{item.shop_type==3&&$store_item$btnType!='store'}}">
+                    <view>
+                        <view class="title">
+                            <text>{{item.title}}</text>
+                            <text class="tag">{{$store_item$appName}}认证</text>
+                        </view>
+                        <text style="color: #999;font-size:26rpx">{{item.content}}</text>
+                    </view>
+                    <view style="display: flex;">
+                        <view>
+                            <image src="{{item.head_image}}" style="border-radius: 20px;width: 40px;height: 40px;margin-top: 10px;margin-right: 10px;"></image>
+                        </view>
+                        <view style="width: 100%;">
+                            <view class="label" style="margin-top:10px">
+                                <text class="label-distance" style="font-size:26rpx">联系人：{{item.name}}</text>
+                                <text class="label-distance" style="font-size:26rpx"></text>
+                            </view>
+                            <view class="label" style="margin-top:10px" wx:if="{{item.dateItem}}">
+                                <text class="label-distance" style="font-size:26rpx">活跃时间：{{item.dateItem}}</text>
+                                <text class="label-distance" style="font-size:26rpx"></text>
+                            </view>
+                            <view class="label" style="margin-top:10px;display: flex;">
+                                <text class="label-distance" style="font-size:26rpx">联系电话：{{item.phone}}</text>
+                                <text class="label-distance chat" style="font-size:26rpx" wx:if="{{!item.chat}}">点击咨询 ></text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="info" wx:if="{{$store_item$btnType=='store'||$store_item$btnType!='store'&&item.shop_type!=3}}">
+                    <view>
+                        <view class="title">
+                            <text>{{item.title}}</text>
+                        </view>
+                        <view class="info-des" wx:if="{{item.city_name}}"> {{item.city_name+'-'+item.area_name}} | {{item.area_size}} ㎡ </view>
+                        <view class="info-tags">
+                            <text style="{{index==0?'color:#FD4C38;border-color:#FD4C38':index==1?'color:#4B97E7;border-color:#4B97E7':'color:#FDBC17;border-color:#FDBC17'}}" wx:for="{{item.lable_list}}" wx:for-item="tag" wx:key="tag">{{tag}}</text>
+                        </view>
+                    </view>
+                    <view class="label">
+                        <view>
+                            <text class="price">
+                                <text class="money">{{item.rent_money}}</text>元/月 </text>
+                        </view>
+                        <text class="label-distance">更新时间：{{item.updated_at}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="tour-bottom" wx:if="{{$store_item$bottom=='show'&&item.shop_type!=3}}">
+                <view>
+                    <image catchtap="$store_item$openProfile" data-com-index="{{undefined}}" data-wpyopenprofile-a="{{headImg}}" src="{{headImg.headimgurl}}" style="width:48rpx;height:48rpx;border-radius:24rpx" wx:for="{{item.consultant_list}}" wx:for-item="headImg" wx:key="headImg"></image>
+                </view>
+                <view class="right_icon" style="display: flex;align-items: center;">{{item.consultant_count>1000?'1000+':item.consultant_count}}人已咨询</view>
+            </view>
+            <view class="tour-bottom btn-area" wx:if="{{$store_item$btnType=='follow'}}">
+                <text catchtap="$store_item$handleCancel" data-com-index="{{undefined}}" data-wpyhandlecancel-a="{{item}}">取消关注</text>
+                <text catchtap="$store_item$handleCallPhone" data-com-index="{{undefined}}" data-wpyhandlecallphone-a="{{item}}">电话咨询</text>
+            </view>
+            <view class="tour-bottom btn-area" wx:if="{{$store_item$btnType=='store'}}">
+                <block wx:if="{{item.pay_status==2}}">
+                    <view style="font-size:12px;color:red">请在一小时内完成支付</view>
+                    <text catchtap="$store_item$handlePay" data-com-index="{{undefined}}" data-wpyhandlepay-a="{{item}}">继续支付</text>
+                </block>
+                <text catchtap="$store_item$handleDelete" data-com-index="{{undefined}}" data-wpyhandledelete-a="{{item}}" wx:if="{{item.pay_status!=1&&item.shop_type!=3}}">删除</text>
+                <block wx:if="{{item.pay_status==1}}">
+                    <text catchtap="$store_item$handleEdit" data-com-index="{{undefined}}" data-wpyhandleedit-a="{{item}}">编辑</text>
+                    <text catchtap="$store_item$handleUp" data-com-index="{{undefined}}" data-wpyhandleup-a="{{item}}" wx:if="{{item.status==2}}">上架</text>
+                    <block wx:if="{{item.status==1}}">
+                        <text catchtap="$store_item$handleUp" data-com-index="{{undefined}}" data-wpyhandleup-a="{{item}}">下架</text>
+                        <block wx:if="{{item.shop_type!=3}}">
+                            <text catchtap="$store_item$handleService" data-com-index="{{undefined}}" data-wpyhandleservice-a="refresh" data-wpyhandleservice-b="{{item}}">刷新</text>
+                            <text catchtap="$store_item$handleService" data-com-index="{{undefined}}" data-wpyhandleservice-a="match" data-wpyhandleservice-b="{{item}}">匹配</text>
+                            <text catchtap="$store_item$handleService" data-com-index="{{undefined}}" data-wpyhandleservice-a="top" data-wpyhandleservice-b="{{item}}">置顶</text>
+                        </block>
+                    </block>
+                </block>
+            </view>
+        </view>
+        <view class="empty-content" wx:if="{{dataSource.length==0}}">
+            <view class="empty-card">
+                <image class="er-code-status" src="../../images/empty.png"></image>
+                <text class="empty-no">{{$empty$title}}</text>
+            </view>
+        </view>
+    </view>
+</view>

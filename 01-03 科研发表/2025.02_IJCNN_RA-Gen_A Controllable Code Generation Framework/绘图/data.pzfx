@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GraphPadPrismFile xmlns="http://graphpad.com/prism/Prism.htm" PrismXMLVersion="5.00">
+<Created>
+<OriginalVersion CreatedByProgram="GraphPad Prism" CreatedByVersion="9.5.0.730" Login="xuyic" DateTime="2025-01-13T14:59:11+08:00"/>
+<MostRecentVersion CreatedByProgram="GraphPad Prism" CreatedByVersion="9.5.0.730" Login="LogicLynx" DateTime="2025-01-24T02:27:29+08:00"/>
+</Created>
+<DefGraphButton ButtonID="301"/>
+<InfoSequence>
+<Ref ID="Info0" Selected="1"/>
+<Ref ID="Info1"/>
+</InfoSequence>
+<Info ID="Info0">
+<Title>Project info 1</Title>
+<Notes/>
+<Constant><Name>Experiment Date</Name><Value>2025-01-13</Value></Constant>
+<Constant><Name>Experiment ID</Name><Value/></Constant>
+<Constant><Name>Notebook ID</Name><Value/></Constant>
+<Constant><Name>Project</Name><Value/></Constant>
+<Constant><Name>Experimenter</Name><Value/></Constant>
+<Constant><Name>Protocol</Name><Value/></Constant>
+</Info>
+
+<Info ID="Info1">
+<Title>Project info 1</Title>
+<Notes/>
+<Constant><Name>Experiment Date</Name><Value>2025-01-14</Value></Constant>
+<Constant><Name>Experiment ID</Name><Value/></Constant>
+<Constant><Name>Notebook ID</Name><Value/></Constant>
+<Constant><Name>Project</Name><Value/></Constant>
+<Constant><Name>Experimenter</Name><Value/></Constant>
+<Constant><Name>Protocol</Name><Value/></Constant>
+</Info>
+
+<TableSequence>
+<Ref ID="Table0"/>
+<Ref ID="Table2"/>
+<Ref ID="Table3"/>
+<Ref ID="Table6"/>
+<Ref ID="Table7"/>
+<Ref ID="Table8" Selected="1"/>
+<Ref ID="Table9"/>
+<Ref ID="Table10"/>
+</TableSequence>
+<Table ID="Table0" XFormat="none" YFormat="SDN" TableType="TwoWay" EVFormat="AsteriskAfterNumber">
+<Title>CWE-190</Title>
+<FloatingNote ID="Sticky22" Auto="0" Color="Yellow" Left="2237" Top="1157" Width="293" Height="3200" ScrWidth="1463" ScrHeight="914" ScrDPI="168">
+<WebLink Flags="0" ToolTip="@help:bar_graphs" URL="@help:bar_graphs">
+Learn about arranging data for different kinds of bar graphs
+</WebLink>
+
+<B><Font Size="11" Color="#000000" Face="Verdana">How grouped data are arranged</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The columns define two treatments, and the rows define three genotypes. For each genotype/treatment, the mean, SD and N were entered. Note that N is not the same for all conditions.</Font>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Unlike other programs, you do not define groups by entering values into special grouping variable columns.  Instead one grouping variable (treatment) is defined by columns, and the other grouping variable is defined by rows.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Analyzing the data</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Click the Analyze button, and choose from two-way ANOVA from the list of Grouped  analyses. Repeated measures ANOVA is impossible when you enter preaveraged data. </Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Grouped  bar graph</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The linked graph is an interleaved bar graph.  Each column of data becomes one kind of bar (different appearance, defined with a legend). There are two kinds of bars (for columns A and B) and three of each type of bar (one for each genotype, defined by rows).   Error bars are graphed from the error values you entered. This is only one of several ways to create bar graphs with Prism.  Click the link below to learn about other kinds of bar graphs.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>What if there is only one row?</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Delete all but the first row, and look at the linked graph. It looks very much like a column  bar graph (data entered on Column tables). The difference is that you can only enter raw data, not mean and SD or SEM, on a column table. In contrast, you can enter preaveraged data (with SD or SEM) on a on a Grouped table. By entering data on only one row, you effectively have only one grouping variable, even though the Grouped table is designed for two grouping variables. </Font>
+</FloatingNote>
+
+<RowTitlesColumn Width="158">
+<Subcolumn>
+<d>0-c</d>
+<d>1-c</d>
+<d>2-c</d>
+</Subcolumn>
+</RowTitlesColumn>
+<YColumn Width="375" Decimals="5" Subcolumns="3">
+<Title>Quality</Title>
+<Subcolumn>
+<d>95.78</d>
+<d>73.87</d>
+<d>78.14</d>
+</Subcolumn>
+<Subcolumn>
+<d>2</d>
+<d>0.7071068</d>
+<d>3.05505</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>2</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="375" Decimals="5" Subcolumns="3">
+<Title>Security</Title>
+<Subcolumn>
+<d>79.95</d>
+<d>78.78</d>
+<d>77.95</d>
+</Subcolumn>
+<Subcolumn>
+<d>15.63117</d>
+<d>1.527525</d>
+<d>3.05505</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="474" Decimals="2" Subcolumns="3">
+<Title>Compliance</Title>
+<Subcolumn>
+<d>95.78</d>
+<d>95</d>
+<d>92.38</d>
+</Subcolumn>
+<Subcolumn>
+<d>2.78</d>
+<d>3.84</d>
+<d>6.06633</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+</Table>
+<Table ID="Table2" XFormat="none" YFormat="SDN" TableType="TwoWay" EVFormat="AsteriskAfterNumber">
+<Title>CWE-125</Title>
+<FloatingNote ID="Sticky23" Auto="0" Color="Yellow" Left="2237" Top="525" Width="317" Height="1509" ScrWidth="1463" ScrHeight="914" ScrDPI="168">
+<WebLink Flags="0" ToolTip="@help:bar_graphs" URL="@help:bar_graphs">
+Learn about arranging data for different kinds of bar graphs
+</WebLink>
+
+<B><Font Size="11" Color="#000000" Face="Verdana">How grouped data are arranged</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The columns define two treatments, and the rows define three genotypes. For each genotype/treatment, the mean, SD and N were entered. Note that N is not the same for all conditions.</Font>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Unlike other programs, you do not define groups by entering values into special grouping variable columns.  Instead one grouping variable (treatment) is defined by columns, and the other grouping variable is defined by rows.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Analyzing the data</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Click the Analyze button, and choose from two-way ANOVA from the list of Grouped  analyses. Repeated measures ANOVA is impossible when you enter preaveraged data. </Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Grouped  bar graph</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The linked graph is an interleaved bar graph.  Each column of data becomes one kind of bar (different appearance, defined with a legend). There are two kinds of bars (for columns A and B) and three of each type of bar (one for each genotype, defined by rows).   Error bars are graphed from the error values you entered. This is only one of several ways to create bar graphs with Prism.  Click the link below to learn about other kinds of bar graphs.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>What if there is only one row?</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Delete all but the first row, and look at the linked graph. It looks very much like a column  bar graph (data entered on Column tables). The difference is that you can only enter raw data, not mean and SD or SEM, on a column table. In contrast, you can enter preaveraged data (with SD or SEM) on a on a Grouped table. By entering data on only one row, you effectively have only one grouping variable, even though the Grouped table is designed for two grouping variables. </Font>
+</FloatingNote>
+
+<RowTitlesColumn Width="158">
+<Subcolumn>
+<d>0-c</d>
+<d>1-c</d>
+<d>2-c</d>
+</Subcolumn>
+</RowTitlesColumn>
+<YColumn Width="375" Decimals="5" Subcolumns="3">
+<Title>Quality</Title>
+<Subcolumn>
+<d>86.23</d>
+<d>82.07</d>
+<d>82.07</d>
+</Subcolumn>
+<Subcolumn>
+<d>7.47913</d>
+<d>8.10648</d>
+<d>9.62359</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>2</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="375" Decimals="2" Subcolumns="3">
+<Title>Security</Title>
+<Subcolumn>
+<d>80.28</d>
+<d>63.73</d>
+<d>86.23</d>
+</Subcolumn>
+<Subcolumn>
+<d>9.75989</d>
+<d>4.94783</d>
+<d>6.10333</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="474" Decimals="2" Subcolumns="3">
+<Title>Compliance</Title>
+<Subcolumn>
+<d>90.21</d>
+<d>75.67</d>
+<d>91.56</d>
+</Subcolumn>
+<Subcolumn>
+<d>4.70596</d>
+<d>9.06497</d>
+<d>3.833</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+</Table>
+<Table ID="Table3" XFormat="none" YFormat="SDN" TableType="TwoWay" EVFormat="AsteriskAfterNumber">
+<Title>CWE-078</Title>
+<FloatingNote ID="Sticky24" Auto="0" Color="Yellow" Left="2237" Top="1157" Width="293" Height="3200" ScrWidth="1463" ScrHeight="914" ScrDPI="168">
+<WebLink Flags="0" ToolTip="@help:bar_graphs" URL="@help:bar_graphs">
+Learn about arranging data for different kinds of bar graphs
+</WebLink>
+
+<B><Font Size="11" Color="#000000" Face="Verdana">How grouped data are arranged</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The columns define two treatments, and the rows define three genotypes. For each genotype/treatment, the mean, SD and N were entered. Note that N is not the same for all conditions.</Font>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Unlike other programs, you do not define groups by entering values into special grouping variable columns.  Instead one grouping variable (treatment) is defined by columns, and the other grouping variable is defined by rows.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Analyzing the data</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Click the Analyze button, and choose from two-way ANOVA from the list of Grouped  analyses. Repeated measures ANOVA is impossible when you enter preaveraged data. </Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Grouped  bar graph</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The linked graph is an interleaved bar graph.  Each column of data becomes one kind of bar (different appearance, defined with a legend). There are two kinds of bars (for columns A and B) and three of each type of bar (one for each genotype, defined by rows).   Error bars are graphed from the error values you entered. This is only one of several ways to create bar graphs with Prism.  Click the link below to learn about other kinds of bar graphs.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>What if there is only one row?</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Delete all but the first row, and look at the linked graph. It looks very much like a column  bar graph (data entered on Column tables). The difference is that you can only enter raw data, not mean and SD or SEM, on a column table. In contrast, you can enter preaveraged data (with SD or SEM) on a on a Grouped table. By entering data on only one row, you effectively have only one grouping variable, even though the Grouped table is designed for two grouping variables. </Font>
+</FloatingNote>
+
+<RowTitlesColumn Width="158">
+<Subcolumn>
+<d>0-py</d>
+<d>1-py</d>
+<d>2-py</d>
+</Subcolumn>
+</RowTitlesColumn>
+<YColumn Width="375" Decimals="5" Subcolumns="3">
+<Title>Quality</Title>
+<Subcolumn>
+<d>72.62</d>
+<d>75.62</d>
+<d>60.45</d>
+</Subcolumn>
+<Subcolumn>
+<d>8.51441</d>
+<d>5.50723</d>
+<d>8.75491</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>2</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="474" Decimals="2" Subcolumns="3">
+<Title>Security</Title>
+<Subcolumn>
+<d>80.95</d>
+<d>79.87</d>
+<d>73.42</d>
+</Subcolumn>
+<Subcolumn>
+<d>6.27332</d>
+<d>2.86213</d>
+<d>4.33234</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="474" Decimals="2" Subcolumns="3">
+<Title>Compliance</Title>
+<Subcolumn>
+<d>90</d>
+<d>80.45</d>
+<d>85.23</d>
+</Subcolumn>
+<Subcolumn>
+<d>9.55713</d>
+<d>1.52975</d>
+<d>4.17696</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+</Table>
+<Table ID="Table6" XFormat="none" YFormat="SDN" TableType="TwoWay" EVFormat="AsteriskAfterNumber">
+<Title>CWE-089</Title>
+<FloatingNote ID="Sticky25" Auto="0" Color="Yellow" Left="2237" Top="1157" Width="293" Height="3200" ScrWidth="1463" ScrHeight="914" ScrDPI="168">
+<WebLink Flags="0" ToolTip="@help:bar_graphs" URL="@help:bar_graphs">
+Learn about arranging data for different kinds of bar graphs
+</WebLink>
+
+<B><Font Size="11" Color="#000000" Face="Verdana">How grouped data are arranged</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The columns define two treatments, and the rows define three genotypes. For each genotype/treatment, the mean, SD and N were entered. Note that N is not the same for all conditions.</Font>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Unlike other programs, you do not define groups by entering values into special grouping variable columns.  Instead one grouping variable (treatment) is defined by columns, and the other grouping variable is defined by rows.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Analyzing the data</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Click the Analyze button, and choose from two-way ANOVA from the list of Grouped  analyses. Repeated measures ANOVA is impossible when you enter preaveraged data. </Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Grouped  bar graph</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The linked graph is an interleaved bar graph.  Each column of data becomes one kind of bar (different appearance, defined with a legend). There are two kinds of bars (for columns A and B) and three of each type of bar (one for each genotype, defined by rows).   Error bars are graphed from the error values you entered. This is only one of several ways to create bar graphs with Prism.  Click the link below to learn about other kinds of bar graphs.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>What if there is only one row?</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Delete all but the first row, and look at the linked graph. It looks very much like a column  bar graph (data entered on Column tables). The difference is that you can only enter raw data, not mean and SD or SEM, on a column table. In contrast, you can enter preaveraged data (with SD or SEM) on a on a Grouped table. By entering data on only one row, you effectively have only one grouping variable, even though the Grouped table is designed for two grouping variables. </Font>
+</FloatingNote>
+
+<RowTitlesColumn Width="158">
+<Subcolumn>
+<d>0-py</d>
+<d>1-py</d>
+<d>2-py</d>
+</Subcolumn>
+</RowTitlesColumn>
+<YColumn Width="474" Decimals="5" Subcolumns="3">
+<Title>Quality</Title>
+<Subcolumn>
+<d>71.18</d>
+<d>82.33</d>
+<d>72.62</d>
+</Subcolumn>
+<Subcolumn>
+<d>4.5386</d>
+<d>5.79855</d>
+<d>9.18263</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>2</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="474" Decimals="2" Subcolumns="3">
+<Title>Security</Title>
+<Subcolumn>
+<d>81.92</d>
+<d>92.98</d>
+<d>72.62</d>
+</Subcolumn>
+<Subcolumn>
+<d>3.08576</d>
+<d>1.67369</d>
+<d>4.04598</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="474" Decimals="2" Subcolumns="3">
+<Title>Compliance</Title>
+<Subcolumn>
+<d>80.78</d>
+<d>80.25</d>
+<d>78.34</d>
+</Subcolumn>
+<Subcolumn>
+<d>6.14459</d>
+<d>1.76667</d>
+<d>7.64808</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+</Table>
+<Table ID="Table7" XFormat="none" YFormat="SDN" TableType="TwoWay" EVFormat="AsteriskAfterNumber">
+<Title>CWE-787</Title>
+<FloatingNote ID="Sticky26" Auto="0" Color="Yellow" Left="2237" Top="1157" Width="293" Height="3200" ScrWidth="1463" ScrHeight="914" ScrDPI="168">
+<WebLink Flags="0" ToolTip="@help:bar_graphs" URL="@help:bar_graphs">
+Learn about arranging data for different kinds of bar graphs
+</WebLink>
+
+<B><Font Size="11" Color="#000000" Face="Verdana">How grouped data are arranged</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The columns define two treatments, and the rows define three genotypes. For each genotype/treatment, the mean, SD and N were entered. Note that N is not the same for all conditions.</Font>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Unlike other programs, you do not define groups by entering values into special grouping variable columns.  Instead one grouping variable (treatment) is defined by columns, and the other grouping variable is defined by rows.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Analyzing the data</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Click the Analyze button, and choose from two-way ANOVA from the list of Grouped  analyses. Repeated measures ANOVA is impossible when you enter preaveraged data. </Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Grouped  bar graph</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The linked graph is an interleaved bar graph.  Each column of data becomes one kind of bar (different appearance, defined with a legend). There are two kinds of bars (for columns A and B) and three of each type of bar (one for each genotype, defined by rows).   Error bars are graphed from the error values you entered. This is only one of several ways to create bar graphs with Prism.  Click the link below to learn about other kinds of bar graphs.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>What if there is only one row?</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Delete all but the first row, and look at the linked graph. It looks very much like a column  bar graph (data entered on Column tables). The difference is that you can only enter raw data, not mean and SD or SEM, on a column table. In contrast, you can enter preaveraged data (with SD or SEM) on a on a Grouped table. By entering data on only one row, you effectively have only one grouping variable, even though the Grouped table is designed for two grouping variables. </Font>
+</FloatingNote>
+
+<RowTitlesColumn Width="158">
+<Subcolumn>
+<d>0-c</d>
+<d>1-c</d>
+<d>2-c</d>
+</Subcolumn>
+</RowTitlesColumn>
+<YColumn Width="375" Decimals="5" Subcolumns="3">
+<Title>Quality</Title>
+<Subcolumn>
+<d>86.45</d>
+<d>72.84</d>
+<d>76.33</d>
+</Subcolumn>
+<Subcolumn>
+<d>1.17868</d>
+<d>9.94684</d>
+<d>2.91357</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>2</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="375" Decimals="2" Subcolumns="3">
+<Title>Security</Title>
+<Subcolumn>
+<d>84.08</d>
+<d>83.42</d>
+<d>86.45</d>
+</Subcolumn>
+<Subcolumn>
+<d>5.59734</d>
+<d>3.34066</d>
+<d>4.57401</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="474" Decimals="2" Subcolumns="3">
+<Title>Compliance</Title>
+<Subcolumn>
+<d>100</d>
+<d>95.78</d>
+<d>95.67</d>
+</Subcolumn>
+<Subcolumn>
+<d>2.9879</d>
+<d>2.398</d>
+<d>0.48151</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+</Table>
+<Table ID="Table8" XFormat="none" YFormat="SDN" TableType="TwoWay" EVFormat="AsteriskAfterNumber">
+<Title>CWE-416</Title>
+<FloatingNote ID="Sticky27" Auto="0" Color="Yellow" Left="2237" Top="525" Width="317" Height="1509" ScrWidth="1463" ScrHeight="914" ScrDPI="168">
+<WebLink Flags="0" ToolTip="@help:bar_graphs" URL="@help:bar_graphs">
+Learn about arranging data for different kinds of bar graphs
+</WebLink>
+
+<B><Font Size="11" Color="#000000" Face="Verdana">How grouped data are arranged</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The columns define two treatments, and the rows define three genotypes. For each genotype/treatment, the mean, SD and N were entered. Note that N is not the same for all conditions.</Font>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Unlike other programs, you do not define groups by entering values into special grouping variable columns.  Instead one grouping variable (treatment) is defined by columns, and the other grouping variable is defined by rows.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Analyzing the data</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Click the Analyze button, and choose from two-way ANOVA from the list of Grouped  analyses. Repeated measures ANOVA is impossible when you enter preaveraged data. </Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Grouped  bar graph</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The linked graph is an interleaved bar graph.  Each column of data becomes one kind of bar (different appearance, defined with a legend). There are two kinds of bars (for columns A and B) and three of each type of bar (one for each genotype, defined by rows).   Error bars are graphed from the error values you entered. This is only one of several ways to create bar graphs with Prism.  Click the link below to learn about other kinds of bar graphs.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>What if there is only one row?</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Delete all but the first row, and look at the linked graph. It looks very much like a column  bar graph (data entered on Column tables). The difference is that you can only enter raw data, not mean and SD or SEM, on a column table. In contrast, you can enter preaveraged data (with SD or SEM) on a on a Grouped table. By entering data on only one row, you effectively have only one grouping variable, even though the Grouped table is designed for two grouping variables. </Font>
+</FloatingNote>
+
+<RowTitlesColumn Width="158">
+<Subcolumn>
+<d>0-c</d>
+<d>1-c</d>
+</Subcolumn>
+</RowTitlesColumn>
+<YColumn Width="375" Decimals="5" Subcolumns="3">
+<Title>Quality</Title>
+<Subcolumn>
+<d>82.5</d>
+<d>72.62</d>
+</Subcolumn>
+<Subcolumn>
+<d>6.55499</d>
+<d>7.61882</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>2</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="375" Decimals="2" Subcolumns="3">
+<Title>Security</Title>
+<Subcolumn>
+<d>82.5</d>
+<d>87.8</d>
+</Subcolumn>
+<Subcolumn>
+<d>8.28133</d>
+<d>5.71613</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="474" Decimals="2" Subcolumns="3">
+<Title>Compliance</Title>
+<Subcolumn>
+<d>75</d>
+<d>94.78</d>
+</Subcolumn>
+<Subcolumn>
+<d>7.92784</d>
+<d>4.43</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+</Table>
+<Table ID="Table9" XFormat="none" YFormat="SDN" TableType="TwoWay" EVFormat="AsteriskAfterNumber">
+<Title>CWE-022</Title>
+<FloatingNote ID="Sticky28" Auto="0" Color="Yellow" Left="2237" Top="1157" Width="293" Height="3200" ScrWidth="1463" ScrHeight="914" ScrDPI="168">
+<WebLink Flags="0" ToolTip="@help:bar_graphs" URL="@help:bar_graphs">
+Learn about arranging data for different kinds of bar graphs
+</WebLink>
+
+<B><Font Size="11" Color="#000000" Face="Verdana">How grouped data are arranged</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The columns define two treatments, and the rows define three genotypes. For each genotype/treatment, the mean, SD and N were entered. Note that N is not the same for all conditions.</Font>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Unlike other programs, you do not define groups by entering values into special grouping variable columns.  Instead one grouping variable (treatment) is defined by columns, and the other grouping variable is defined by rows.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Analyzing the data</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Click the Analyze button, and choose from two-way ANOVA from the list of Grouped  analyses. Repeated measures ANOVA is impossible when you enter preaveraged data. </Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Grouped  bar graph</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The linked graph is an interleaved bar graph.  Each column of data becomes one kind of bar (different appearance, defined with a legend). There are two kinds of bars (for columns A and B) and three of each type of bar (one for each genotype, defined by rows).   Error bars are graphed from the error values you entered. This is only one of several ways to create bar graphs with Prism.  Click the link below to learn about other kinds of bar graphs.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>What if there is only one row?</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Delete all but the first row, and look at the linked graph. It looks very much like a column  bar graph (data entered on Column tables). The difference is that you can only enter raw data, not mean and SD or SEM, on a column table. In contrast, you can enter preaveraged data (with SD or SEM) on a on a Grouped table. By entering data on only one row, you effectively have only one grouping variable, even though the Grouped table is designed for two grouping variables. </Font>
+</FloatingNote>
+
+<RowTitlesColumn Width="158">
+<Subcolumn>
+<d>0-py</d>
+<d>1-py</d>
+<d>2-py</d>
+</Subcolumn>
+</RowTitlesColumn>
+<YColumn Width="375" Decimals="5" Subcolumns="3">
+<Title>Quality</Title>
+<Subcolumn>
+<d>78.37</d>
+<d>78.14</d>
+<d>78.62</d>
+</Subcolumn>
+<Subcolumn>
+<d>2.03846</d>
+<d>3.28787</d>
+<d>9.14765</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+<d>2</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="375" Decimals="2" Subcolumns="3">
+<Title>Security</Title>
+<Subcolumn>
+<d>81.7</d>
+<d>77.72</d>
+<d>64.77</d>
+</Subcolumn>
+<Subcolumn>
+<d>4.42938</d>
+<d>5.9963</d>
+<d>4.35423</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="474" Decimals="2" Subcolumns="3">
+<Title>Compliance</Title>
+<Subcolumn>
+<d>89.67</d>
+<d>91.45</d>
+<d>60</d>
+</Subcolumn>
+<Subcolumn>
+<d>4.35423</d>
+<d>3.69785</d>
+<d>6.46749</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+</Table>
+<Table ID="Table10" XFormat="none" YFormat="SDN" TableType="TwoWay" EVFormat="AsteriskAfterNumber">
+<Title>CWE-476</Title>
+<FloatingNote ID="Sticky29" Auto="0" Color="Yellow" Left="2237" Top="1157" Width="293" Height="3200" ScrWidth="1463" ScrHeight="914" ScrDPI="168">
+<WebLink Flags="0" ToolTip="@help:bar_graphs" URL="@help:bar_graphs">
+Learn about arranging data for different kinds of bar graphs
+</WebLink>
+
+<B><Font Size="11" Color="#000000" Face="Verdana">How grouped data are arranged</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The columns define two treatments, and the rows define three genotypes. For each genotype/treatment, the mean, SD and N were entered. Note that N is not the same for all conditions.</Font>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Unlike other programs, you do not define groups by entering values into special grouping variable columns.  Instead one grouping variable (treatment) is defined by columns, and the other grouping variable is defined by rows.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Analyzing the data</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Click the Analyze button, and choose from two-way ANOVA from the list of Grouped  analyses. Repeated measures ANOVA is impossible when you enter preaveraged data. </Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>Grouped  bar graph</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>The linked graph is an interleaved bar graph.  Each column of data becomes one kind of bar (different appearance, defined with a legend). There are two kinds of bars (for columns A and B) and three of each type of bar (one for each genotype, defined by rows).   Error bars are graphed from the error values you entered. This is only one of several ways to create bar graphs with Prism.  Click the link below to learn about other kinds of bar graphs.</Font>
+<B><Font Size="11" Color="#000000" Face="Verdana"><BR/><BR/>What if there is only one row?</Font></B>
+<Font Size="11" Color="#000000" Face="Verdana"><BR/>Delete all but the first row, and look at the linked graph. It looks very much like a column  bar graph (data entered on Column tables). The difference is that you can only enter raw data, not mean and SD or SEM, on a column table. In contrast, you can enter preaveraged data (with SD or SEM) on a on a Grouped table. By entering data on only one row, you effectively have only one grouping variable, even though the Grouped table is designed for two grouping variables. </Font>
+</FloatingNote>
+
+<RowTitlesColumn Width="158">
+<Subcolumn>
+<d>0-c</d>
+<d>1-c</d>
+</Subcolumn>
+</RowTitlesColumn>
+<YColumn Width="375" Decimals="5" Subcolumns="3">
+<Title>Quality</Title>
+<Subcolumn>
+<d>74.63</d>
+<d>78.63</d>
+</Subcolumn>
+<Subcolumn>
+<d>3.74398</d>
+<d>1.88285</d>
+</Subcolumn>
+<Subcolumn>
+<d>2</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="375" Decimals="2" Subcolumns="3">
+<Title>Security</Title>
+<Subcolumn>
+<d>74.14</d>
+<d>77.65</d>
+</Subcolumn>
+<Subcolumn>
+<d>7.39903</d>
+<d>3.89877</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="474" Decimals="2" Subcolumns="3">
+<Title>Compliance</Title>
+<Subcolumn>
+<d>92.34</d>
+<d>95.78</d>
+</Subcolumn>
+<Subcolumn>
+<d>6.086</d>
+<d>2.288</d>
+</Subcolumn>
+<Subcolumn>
+<d>3</d>
+<d>3</d>
+</Subcolumn>
+</YColumn>
+</Table>
+
+<!--Analyses, graphs and layouts as compressed binary. Don't edit this part of the file.-->
+
+<Template xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">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
+AExhN+g=</Template></GraphPadPrismFile>

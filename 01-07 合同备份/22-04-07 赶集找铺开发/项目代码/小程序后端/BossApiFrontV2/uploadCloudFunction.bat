@@ -1,0 +1,1 @@
+"D:\Tencent\微信web开发者工具\cli.bat" cloud functions deploy --e ganjizhaopu-2g9x6n5v705fe363 --n quickstartFunctions --r --project "D:\BOSS-Shop\小程序后端\BossApiFrontV2" --report_first --report

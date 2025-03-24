@@ -1,0 +1,34 @@
+<view class="order-list-container">
+    <view class="goods_list">
+        <swiper autoplay="false" class="swiper" duration="300" indicatorDots="true" interval="3000" style="height:{{$banner$branner.length>0?'180rpx':'0'}}" wx:if="{{$banner$branner.length>0}}">
+            <swiper-item wx:for="{{$banner$branner}}" wx:key="item">
+                <view class="banner_img" style="background-image:url({{item.image_src}})"></view>
+            </swiper-item>
+        </swiper>
+        <view style="background: #fff;padding: 24rpx;margin-bottom: 24rpx;" wx:for="{{dataSource}}" wx:key="item">
+            <view style="display: flex;align-items: center;border-bottom: 1rpx solid #f1f1f1;padding-bottom: 24rpx;">
+                <image src="{{item.service_user_headimage}}" style="border-radius:40rpx;width:80rpx;height:80rpx;margin-right:12rpx"></image>
+                <view style="display: flex;flex-direction: column;line-height: 20px;">
+                    <text>{{item.service_user_name}}</text>
+                    <text style="font-size:12px;color:#999">{{item.service_at}}</text>
+                </view>
+            </view>
+            <view class="tour-item">
+                <view class="info" style="padding-left:0">
+                    <view class="title">
+                        <text>{{item.service_content}}</text>
+                    </view>
+                </view>
+                <view catchtap="viewImages" class="thumb-img" data-wpyviewimages-a="{{item.service_images}}">
+                    <view class="image" style="background-image:url({{item}});align-items: flex-start;justify-content: flex-end;" wx:for="{{item.service_images}}" wx:key="item"></view>
+                </view>
+            </view>
+        </view>
+        <view class="empty-content" wx:if="{{dataSource.length==0}}">
+            <view class="empty-card">
+                <image class="er-code-status" src="../../images/empty.png"></image>
+                <text class="empty-no">{{$empty$title}}</text>
+            </view>
+        </view>
+    </view>
+</view>

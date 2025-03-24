@@ -1,0 +1,6 @@
+<view class="searchhistory">
+    <view class="historybtn">
+        <image class="searchimg" src="../../images/search.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+        <input type="text" class="searchtitle" placeholder="搜索" bindconfirm="btnsearchhistory"></input>
+    </view>
+</view>

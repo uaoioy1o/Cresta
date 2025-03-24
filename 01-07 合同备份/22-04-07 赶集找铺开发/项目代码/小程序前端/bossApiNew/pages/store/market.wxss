@@ -1,0 +1,29 @@
+.article-container {
+    background: #fff;
+    cursor: default;
+}
+
+.article-container .article_img {
+    background-size: cover;
+    height: 460rpx;
+    width: 100%;
+}
+
+.article-container .content {
+    word-wrap: break-word;
+    padding: 0 24rpx;
+    word-break: break-all;
+}
+
+.article-container .content .title {
+    font-size: 32rpx;
+    font-weight: 400;
+    font-weight: 500;
+    line-height: 1.4;
+    padding: 24rpx 0 36rpx;
+    word-break: break-all;
+}
+
+.article-container .content image {
+    max-width: 100%;
+}

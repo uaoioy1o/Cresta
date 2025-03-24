@@ -1,0 +1,28 @@
+<view class="container">
+    <view>
+        <image mode="widthFix" src="{{ossHost}}zhuandian/wx_app/match.jpg" style="width:calc(100vw)"></image>
+    </view>
+    <view class="detail">
+        <view class="pannel">
+            <view class="pannel-body">
+                <view class="container_input_item">
+                    <text style="font-bold:500">支付金额：</text>
+                    <view style=" display: flex;align-items: center;color:#FD4C38"> ￥{{amount*num}} </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="detail">
+        <view class="pannel">
+            <view class="pannel-body" style="padding:24rpx">
+                <view class="container_input_item" style="height:60px;flex-direction: column;color:#FF9543">
+                    <text style="width:100%;color:#FF9543;height: 20px;">店铺曝光度越高，店铺会获得更多曝光度</text>
+                    <text style="width:100%;color:#FF9543;height: 20px;">每支付1元可以获得1个刷新点</text>
+                    <text style="width:100%;color:#FF9543;height: 20px;">刷新点可用于购买店铺刷新服务</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <button catchtap="submit" class="button_submit"> 确定 </button>
+</view>
+<wxs module="tag" src="../../wxs/tagFilter.wxs" />

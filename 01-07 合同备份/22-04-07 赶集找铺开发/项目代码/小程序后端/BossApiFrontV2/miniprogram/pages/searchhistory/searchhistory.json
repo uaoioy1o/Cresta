@@ -1,0 +1,6 @@
+{
+    "usingComponents": {},
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "赶集找铺",
+    "navigationBarBackgroundColor": "#F7513B"
+}

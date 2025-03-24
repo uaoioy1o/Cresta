@@ -1,0 +1,44 @@
+<view class="container">
+    <view>
+        <image mode="widthFix" src="../../images/vip.png" style="width:calc(100vw - 48rpx);"></image>
+    </view>
+    <view class="detail">
+        <view class="pannel">
+            <view class="pannel-title">
+                <text class="main-title">选择VIP套餐</text>
+            </view>
+            <view class="pannel-body" style="padding-bottom:24rpx">
+                <view catchtap="navDetail" class="{{currentId==index?'active':''}} container_input_item times" data-wpynavdetail-a="{{index}}" wx:for="{{dataSource}}" wx:key="item">
+                    <view style="display: flex;align-items: center;">
+                        <text>{{item.name}}</text>
+                    </view>
+                    <view style=" display: flex;align-items: center;"> ￥{{item.price}} </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="detail">
+        <view class="pannel">
+            <view class="pannel-body" style="padding:24rpx">
+                <view class="container_input_item" style="height:100px;flex-direction: column;color:#FF9543">
+                    <text style="width:100%;color:#FF9543;height: 20px;">1.每日查看找店客户资源不受限制</text>
+                    <text style="width:100%;color:#FF9543;height: 20px;">2.每日可主动沟通30人</text>
+                    <text style="width:100%;color:#FF9543;height: 20px;">3.可与找店客户交换电话/微信4店铺置顶推广3天</text>
+                    <text style="width:100%;color:#FF9543;height: 20px;">4.专属客服优先推荐店铺</text>
+                    <text style="width:100%;color:#FF9543;height: 20px;">5.专属勘察员协助沟通店铺</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="footer">
+        <view style="display: flex;align-items: center;padding:0 24rpx 24rpx 24rpx">
+            <view catchtap="handleCheckBox">
+                <image src="../../images/{{isChecked?'confirm':'circle'}}.png" style="width:36rpx;height:36rpx;margin-right:24rpx"></image>
+            </view>
+            <view style="flex: 1;">我已阅读并同意 <text catchtap="handleXieyi" data-wpyhandlexieyi-a="/pages/store/vip" style="color:blue">《{{title}}VIP服务协议》</text>
+            </view>
+        </view>
+        <button catchtap="submit" class="button_submit"> 确定 </button>
+    </view>
+</view>
+<wxs module="tag" src="../../wxs/tagFilter.wxs" />

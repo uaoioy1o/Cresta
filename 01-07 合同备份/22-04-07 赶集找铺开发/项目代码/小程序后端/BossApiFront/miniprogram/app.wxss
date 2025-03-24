@@ -1,0 +1,28 @@
+.main-title {
+    font-size: 32rpx;
+}
+
+.pannel .pannel-title {
+    font-weight: 500;
+    padding: 24rpx;
+}
+
+.pannel .pannel-body {
+    padding: 24rpx;
+}
+
+view {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1;
+}
+
+.right_icon:after {
+    background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    width: 20rpx;
+}

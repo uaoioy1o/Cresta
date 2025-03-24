@@ -1,0 +1,6 @@
+{
+    "usingComponents": {},
+    "enablePullDownRefresh": true,
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "店铺出租"
+}

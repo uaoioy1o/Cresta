@@ -1,0 +1,14 @@
+<view class="mine-feedmsg-box">
+    <view class="full-wrap">
+        <view class="content" wx:if="{{feedMsgList.length>0}}" wx:for="{{feedMsgList}}" wx:key="item">
+            <view catchtap="openPage" class="feed-msg" data-wpyopenpage-a="{{item.shop_info}}" data-wpyopenpage-b="{{item.shop_consult_id}}">
+                <view class="feedback">
+                    <view class="feedtitle">{{item.shop_info.title}}</view>
+                    <text style="margin-top:5px;color:#666">联系人：{{item.shop_info.name}}</text>
+                    <text style="margin-top:5px;color:#666">咨询时间：{{item.created_at}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="nomessage" style="margin-top:30px;" wx:if="{{feedMsgList.length<=0}}">暂无消息</view>
+    </view>
+</view>

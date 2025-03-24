@@ -1,0 +1,29 @@
+<view class="order-list-container">
+    <swiper autoplay="false" class="swiper" duration="300" indicatorDots="true" interval="3000" style="height:{{$banner$branner.length>0?'180rpx':'0'}}" wx:if="{{$banner$branner.length>0}}">
+        <swiper-item wx:for="{{$banner$branner}}" wx:key="item">
+            <view class="banner_img" style="background-image:url({{item.image_src}})"></view>
+        </swiper-item>
+    </swiper>
+    <view class="goods_list">
+        <view class="header_info" wx:for="{{dataSource}}" wx:key="item">
+            <view style="display: flex;align-items: center;">
+                <view class="head_img" style="background-image:url('{{item.headimgurl}}')"></view>
+                <view class="nick_name">
+                    <view class="usernickname">{{item.nickname}}</view>
+                    <view class="nickphone">最新登录时间 : {{item.login_last_at}}</view>
+                </view>
+            </view>
+            <view class="credit_shop">
+                <view style="display: flex;background:rgba(255,255,255,0.9);border-radius: 48rpx;">
+                    <text class="mark right_icon" style="display: flex;align-items: center;font-size:12px;margin-left: 10rpx;"></text>
+                </view>
+            </view>
+        </view>
+        <view class="empty-content" wx:if="{{dataSource.length==0}}">
+            <view class="empty-card">
+                <image class="er-code-status" src="../../images/empty.png"></image>
+                <text class="empty-no">{{$empty$title}}</text>
+            </view>
+        </view>
+    </view>
+</view>

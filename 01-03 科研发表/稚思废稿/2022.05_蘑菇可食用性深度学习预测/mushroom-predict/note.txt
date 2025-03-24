@@ -1,0 +1,6 @@
+df = pd.DataFrame(cars, columns = ['Brand', 'Price’]) 
+dates_d = pd.date_range('20300101', periods=6, freq='D’) 
+df = pd.DataFrame(random, index=dates_m, columns=list('ABCD'))
+df.head()
+df.tail()
+df.describe()

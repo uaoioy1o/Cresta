@@ -1,0 +1,31 @@
+<view class="mine-bindphone-box">
+    <view class="full-wrap">
+        <view class="content">
+            <text class="main-title">产品建议</text>
+            <view class="card-table table-body">
+                <textarea bindinput="inputValueChanged" class="item-input" id="suggest" maxlength="100" placeholder="请填写10字以上的问题描述以便我们提供更好的服务和帮助~" style="height:100px;" type="number" value="{{feedbackinfo}}"></textarea>
+            </view>
+            <text class="main-title">截图（选填）（{{shop_images.length}}/3）</text>
+            <view class="card-table table-body table-image">
+                <view catchtap="viewImages" class="image" data-wpyviewimages-a="{{item}}" style="background-image:url({{item}});align-items: flex-start;justify-content: flex-end;" wx:for="{{shop_images}}" wx:key="item">
+                    <image catchtap="deleteImage" data-wpydeleteimage-a="{{index}}" src="../../images/delete.png" style="width: 32rpx;height: 32rpx;margin-top: -16rpx;"></image>
+                </view>
+                <view catchtap="chooseImage" class="image" wx:if="{{shop_images.length<3}}">
+                    <image src="../../images/add-select.png" style="width:64rpx;height:64rpx"></image>
+                </view>
+            </view>
+            <text class="main-title">联系方式</text>
+            <view class="card-table table-body">
+                <input bindinput="inputValueChanged" class="item-input" id="contact_info" maxlength="100" placeholder="请填写您的邮箱或者手机号码" type="number" value="{{feedbacktitle}}"></input>
+                <view style="color:#FF9543;margin-top:12rpx">客服将在72小时内联系你</view>
+            </view>
+        </view>
+        <view class="btn-oprate">
+            <view class="btn-padding">
+                <button catchtap="handleFeedback" class="btn-bg eck-btn-primary" disabled="{{isDisBtn}}">
+                    确定
+                </button>
+            </view>
+        </view>
+    </view>
+</view>

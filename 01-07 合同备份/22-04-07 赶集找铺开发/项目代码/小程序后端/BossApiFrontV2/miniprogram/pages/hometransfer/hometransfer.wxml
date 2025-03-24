@@ -1,0 +1,60 @@
+<!-- pages/homerent/homerent.wxml -->
+<!-- 中间轮播图 -->
+<view class="container">
+    <!-- 轮播图 -->
+    <view style="margin:40rpx 12px 0;height:120px;">
+        <swiper circular autoplay>
+            <swiper-item class="item swipersw" wx:for="{{banner}}" wx:key="{{index}}">
+                <image src="{{'../../images/banner/'+item.image_src}}" style="border-radius: 15px;height:120px;width:100%;"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 转店信息 -->
+    <view class="pannel-body" catchtap="navigateToPublish">
+        <view style="border-bottom: 1rpx solid #F2F3F4;" wx:for="{{shop_list}}" wx:key="item">
+            <view wx:if="{{item.type_id==1}}">
+                <view class="tour-item">
+                    <!-- 左上角标题 -->
+                    <view class="thumb" style="background-image:url({{item.shopimage_set[0].image}})">
+                        <view class="bread" wx:if="{{item.is_recommend==1}}">置顶</view>
+                        <view class="bread" wx:if="{{item.is_recommend==0&&item.is_new==1}}">
+                            上新
+                        </view>
+                    </view>
+                    <!-- 店铺信息 -->
+                    <view class="info">
+                        <view>
+                            <view class="title">
+                                <text>{{item.title}}</text>
+                            </view>
+                            <view class="info-des" wx:if="{{user_location}}">
+                                {{user_location}} | {{item.area_size}} ㎡
+                            </view>
+                            <view wx:else>
+                                {{item.city_name+'-'+item.area_name}} | {{item.area_size}} ㎡
+                            </view>
+                            <view class="info-tags">
+                                <text style="{{index==0?'color:#FD4C38;borde-color:#4B97E7':'color:#FDBC17;border-color:#FDBC17'}}" wx:for="{{item.lable_list}}" wx:for-item="tag" wx:key="tag">{{tag}}</text>
+                            </view>
+                        </view>
+                        <view class="label">
+                            <view>
+                                <text class="price"><text class="money">{{item.transfer_fee}}</text>万</text>
+                            </view>
+                            <text class="label-distance">更新时间：{{item.createTime}}</text>
+                        </view>
+                    </view>
+                </view>
+                <!-- N人咨询 -->
+                <view class="tour-bottom">
+                    <view>
+                        <image catchtap="$store_item$openProfile" data-com-index="{{undefined}}" data-wpyopenprofile-a="{{headImg}}" src="{{headImg.headimgurl}}" style="width:48rpx;height:48rpx;border-radius:24rpx" wx:for="{{item.consultant_list}}" wx:for-item="headImg" wx:key="headImg"></image>
+                    </view>
+                    <view class="right_icon" style="display: flex;align-items: center;">
+                        {{item.consultant_count}}人已浏览
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

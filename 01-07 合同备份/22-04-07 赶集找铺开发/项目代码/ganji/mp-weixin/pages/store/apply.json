@@ -1,0 +1,10 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "发布店铺",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "region-picker": "/components/region-picker/region-picker",
+    "step": "/components/Step",
+    "custom-header": "/components/CustomHeader"
+  }
+}

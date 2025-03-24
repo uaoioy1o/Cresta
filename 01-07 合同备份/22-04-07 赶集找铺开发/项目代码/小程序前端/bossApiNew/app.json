@@ -1,0 +1,63 @@
+{
+  "pages": [
+    
+    "pages/home/index",
+    "pages/refresh/fresh",
+    "pages/home/chooseCity",
+    "pages/home/find",
+    "pages/home/detail",
+    "pages/home/user",
+    "pages/aurthorize"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black"
+  },
+  "subPackages": [
+    {
+      "root": "pages/mine/",
+      "pages": [
+        "vip",
+        "chatList",
+        "info",
+        "message",
+        "top",
+        "coupon/index",
+        "aboutus",
+        "shopList2",
+        "refresh",
+        "match",
+        "speed",
+        "profile",
+        "service",
+        "contact/foot",
+        "shopList",
+        "feedback",
+        "followList",
+        "problem"
+      ]
+    },
+    {
+      "root": "pages/store/",
+      "pages": [
+        "apply",
+        "chat",
+        "market",
+        "private",
+        "search",
+        "applyQz",
+        "xieyi",
+        "vip",
+        "detail",
+        "list"
+      ]
+    }
+  ],
+  "sitemapLocation": "sitemap.json"
+}

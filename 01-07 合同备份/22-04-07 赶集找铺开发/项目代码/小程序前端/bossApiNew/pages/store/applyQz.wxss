@@ -1,0 +1,209 @@
+.content {
+    background: rgba(0,0,0,.7);
+    height: calc(100vh);
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.picker-view {
+    align-items: center;
+    background-color: #fff;
+    bottom: 0;
+    bottom: 0rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0rpx;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+.picker-item {
+    line-height: 50px!important;
+    margin-left: 5rpx;
+    margin-right: 5rpx;
+    text-align: center;
+}
+
+.picker-view__pane {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 100rpx;
+    justify-content: space-between;
+    padding: 20rpx 32rpx;
+    width: 100%;
+}
+
+.picker-view__pane text {
+    color: #0c8!important;
+    font-size: 32rpx;
+}
+
+.pick-view__group {
+    height: 500rpx;
+    width: 96%;
+}
+
+.main-title {
+    font-size: 32rpx;
+}
+
+.pannel .pannel-title {
+    font-weight: 500;
+    padding: 24rpx;
+}
+
+.pannel .pannel-body {
+    padding: 24rpx;
+}
+
+view {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1;
+}
+
+.right_icon:after {
+    background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    width: 20rpx;
+}
+
+page {
+    background-color: #f8f8f8;
+}
+
+.container {
+    padding-bottom: 100px;
+}
+
+.container .container_input {
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin: 24rpx;
+    padding: 0rpx 24rpx;
+}
+
+.container .container_input .container_input_item {
+    align-items: center;
+    border-bottom: 1rpx solid #e5e5e5;
+    display: flex;
+    height: 100rpx;
+}
+
+.container .container_input .container_input_item:last-child {
+    border-bottom: none;
+}
+
+.container .container_input .container_input_item text {
+    color: #333;
+    font-size: 28rpx;
+    width: 250rpx;
+}
+
+.container .container_input .container_input_item input {
+    color: #333;
+    font-size: 28rpx;
+    text-align: right;
+    width: 100%;
+}
+
+.container .container_input .info-tags {
+    display: flex;
+    margin-bottom: 12rpx;
+}
+
+.container .container_input .info-tags text {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    background: #f2f3f5;
+    border-radius: 11px;
+    color: #666;
+    display: -webkit-box;
+    font-size: 22rpx;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 12rpx;
+    overflow: hidden;
+    text-align: center;
+    width: 75px;
+}
+
+.container .container_input .info-tags text.active {
+    background: #ffe60f;
+}
+
+.container .reservation_pannel {
+    background: #fff;
+    border-radius: 20rpx;
+    margin-top: 24rpx;
+    padding-top: 24rpx;
+}
+
+.container .item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24rpx 0 0;
+    width: calc(100vw - 72rpx);
+}
+
+.container .item .image {
+    align-items: center;
+    background: #f7f7f7;
+    background-size: cover;
+    display: flex;
+    height: calc((100vw - 72rpx)/4 - 24rpx);
+    justify-content: center;
+    margin-bottom: 24rpx;
+    margin-right: 24rpx;
+    width: calc((100vw - 72rpx)/4 - 24rpx);
+}
+
+.container .button_submit {
+    background-color: #ffe60f;
+    bottom: 0;
+    color: #333;
+    font-size: 36rpx;
+    line-height: 92rpx;
+    margin: 100rpx 30rpx 20px;
+    position: fixed;
+    width: calc(100vw - 60rpx);
+}
+
+.container .button_submit::after {
+    border: none;
+}
+
+.container .button_delet {
+    background-color: #fff;
+    color: #ffe60f;
+    font-size: 36rpx;
+    line-height: 92rpx;
+    margin: 36rpx 30rpx 0;
+}
+
+.container .button_delet::after {
+    border: 1px solid #d6d5d6;
+}
+
+.container .footer {
+    background: #fff;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 32rpx;
+    height: 100px;
+    padding: 24rpx 0 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}

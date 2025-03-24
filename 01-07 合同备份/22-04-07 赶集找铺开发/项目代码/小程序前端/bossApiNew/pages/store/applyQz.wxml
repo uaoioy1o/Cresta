@@ -1,0 +1,59 @@
+<view class="container">
+    <view class="container_input">
+        <view class="container_input_item" style="border:none">
+            <text>标题：</text>
+        </view>
+        <view>
+            <textarea bindblur="inputValueChanged" data-name="title" placeholder="请输入标题" style="border:1rpx solid #e5e5e5;height: 100rpx;padding: 12rpx;width: calc(100vw - 120rpx);border-radius: 10rpx;" value="{{params.title}}"></textarea>
+        </view>
+        <view catchtap="chooseArea" class="container_input_item">
+            <text>所属区域：</text>
+            <picker bindchange="inputValueChanged" class="right_icon" data-name="area" mode="region" style="width: 100%;display: flex;align-items: center;justify-content: flex-end;" value="{{region}}">
+                <view class="picker"> {{regionName||'选择区域'}} </view>
+            </picker>
+        </view>
+        <view class="container_input_item">
+            <text>经营行业：</text>
+            <picker bindchange="inputValueChanged" class="right_icon" data-name="trade_id" range="{{shopTrade}}" style="width: 100%;display: flex;align-items: center;justify-content: flex-end;" value="{{shopTradeIndex}}"> {{shopTrade[shopTradeIndex]}} </picker>
+        </view>
+        <view class="container_input_item" style="border:none">
+            <text>特色标签({{params.lable_ids.length}}/3)：</text>
+        </view>
+        <view catchtap="handleShowMoreTags" class="info-tags">
+            <text catchtap="handleClickTag" class="{{tag.filterTag(params.lable_ids,item.value)?'active':''}} tag-item" data-wpyhandleclicktag-a="{{item}}" wx:if="{{index<(showMoreTag?addParams.shop_lable.length:3)}}" wx:for="{{addParams.shop_lable}}" wx:key="item">{{item.name}}</text>
+            <view class="tag-item" style="display: flex;align-items: center;justify-content: center;" wx:if="{{addParams.shop_lable.length>3}}"> 更多标签<image src="../../images/{{!showMoreTag?'down1':'up1'}}.png" style="width:24rpx;height:24rpx;margin-left:12rpx"></image>
+            </view>
+        </view>
+        <view class="container_input_item">
+            <text>面积(㎡)：</text>
+            <input bindinput="inputValueChanged" class="input_text" confirmType="确定" data-name="area_size" placeholder="店铺面积" type="number" value="{{params.area_size}}"></input>
+        </view>
+        <view class="container_input_item">
+            <text>租金(元/月)：</text>
+            <input bindinput="inputValueChanged" class="input_text" confirmType="确定" data-name="rent_money" placeholder="店铺租金" type="number" value="{{params.rent_money}}"></input>
+        </view>
+        <view class="container_input_item">
+            <text>预计投资(元)：</text>
+            <input bindinput="inputValueChanged" class="input_text" confirmType="确定" data-name="estimated_investment_money" placeholder="转让费面议" type="number" value="{{params.estimated_investment_money}}"></input>
+        </view>
+        <view class="container_input_item">
+            <text>姓名：</text>
+            <input bindinput="inputValueChanged" class="input_text" confirmType="确定" data-name="name" placeholder="姓名" value="{{params.name}}"></input>
+        </view>
+        <view class="container_input_item">
+            <text>联系人号码：</text>
+            <input bindinput="inputValueChanged" class="input_text" confirmType="确定" data-name="phone" placeholder="联系人号码" type="number" value="{{params.phone}}"></input>
+        </view>
+    </view>
+    <view class="footer">
+        <view style="display: flex;align-items: center;padding:0 24rpx 24rpx 24rpx">
+            <view catchtap="handleCheckBox" style="width:60rpx;height:60rpx;">
+                <image src="../../images/{{isChecked?'confirm':'circle'}}.png" style="width:36rpx;height:36rpx;margin-right:24rpx"></image>
+            </view>
+            <view style="flex: 1;">我已阅读并同意 <text catchtap="handleXieyi" data-wpyhandlexieyi-a="/pages/store/xieyi" style="color:blue">《{{title}}使用协议》</text> 、<text catchtap="handleXieyi" data-wpyhandlexieyi-a="/pages/store/private" style="color:blue">《{{title}}隐私政策》</text> 与<text catchtap="handleXieyi" data-wpyhandlexieyi-a="/pages/store/market" style="color:blue">《{{title}}推广协议》</text>
+            </view>
+        </view>
+        <button catchtap="submit" class="button_submit"> 确定 </button>
+    </view>
+</view>
+<wxs module="tag" src="../../wxs/tagFilter.wxs" />

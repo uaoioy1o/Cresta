@@ -1,0 +1,488 @@
+.main-title {
+    font-size: 32rpx;
+}
+
+.pannel .pannel-title {
+    font-weight: 500;
+    padding: 24rpx;
+}
+
+.pannel .pannel-body {
+    padding: 24rpx;
+}
+
+view {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1;
+}
+
+.right_icon:after {
+    background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    width: 20rpx;
+}
+
+.tour-item {
+    background: #fff;
+    display: flex;
+    padding: 24rpx;
+}
+
+.tour-item .thumb {
+    background-size: cover;
+    border-radius: 12rpx;
+    height: 200rpx;
+    width: 200rpx;
+}
+
+.tour-item .thumb .bread {
+    background: linear-gradient(90deg,#fe4028,#ff5a3d);
+    border-radius: 12rpx 0 12rpx 0;
+    color: #fff;
+    font-size: 24rpx;
+    padding: 6rpx 12rpx;
+    width: 50rpx;
+}
+
+.tour-item .info {
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 24rpx;
+    position: relative;
+}
+
+.tour-item .info,.tour-item .info .title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tour-item .info .title {
+    line-height: 20px;
+    padding: 0 0 12rpx;
+}
+
+.tour-item .info .title .tag {
+    background-color: rgba(255,230,15,.2);
+    border-radius: 5px;
+    color: #ffe60f;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 0 5px;
+}
+
+.tour-item .info .title text {
+    font-size: 28rpx;
+    font-weight: 700;
+}
+
+.tour-item .info .info-des {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color: #666;
+    display: -webkit-box;
+    font-size: 24rpx;
+    margin-bottom: 12rpx;
+    max-height: 48rpx;
+    overflow: hidden;
+}
+
+.tour-item .info .info-tags {
+    display: flex;
+    margin-bottom: 12rpx;
+}
+
+.tour-item .info .info-tags text {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    border: 1rpx solid #f2f3f4;
+    border-radius: 6rpx;
+    color: #666;
+    display: -webkit-box;
+    font-size: 22rpx;
+    margin-right: 12rpx;
+    overflow: hidden;
+    padding: 6rpx;
+}
+
+.tour-item .info .label {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tour-item .info .label .chat {
+    background-color: #ffe60f;
+    color: #fff!important;
+    padding: 2px;
+}
+
+.tour-item .info .label .price {
+    color: #fd4c38;
+    font-size: 24rpx;
+}
+
+.tour-item .info .label .price .money {
+    font-size: 40rpx;
+    font-weight: 500;
+    margin-right: 10rpx;
+}
+
+.tour-item .info .label .label-des {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    color: #ffe60f;
+    display: -webkit-box;
+    flex: 1;
+    font-size: 22rpx;
+    height: 22rpx;
+    overflow: hidden;
+}
+
+.tour-item .info .label .label-distance {
+    color: #999;
+    font-size: 22rpx;
+    padding-right: .2rem;
+    text-align: right;
+}
+
+.tour-bottom {
+    align-items: center;
+    background: #fff;
+    justify-content: space-between;
+}
+
+.btn-area,.tour-bottom {
+    display: flex;
+    padding: 0 24rpx 24rpx;
+}
+
+.btn-area {
+    justify-content: flex-end;
+}
+
+.btn-area text {
+    border: 1rpx solid #ff9543;
+    border-radius: 24rpx;
+    color: #ff9543;
+    font-size: 12px;
+    margin-left: 24rpx;
+    padding: 12rpx 24rpx;
+}
+
+.custom-header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.custom-header .header-img {
+    align-items: center;
+    display: flex;
+    height: 44px;
+    padding-top: 20px;
+}
+
+.custom-header .header-img .icon {
+    border-radius: 20px;
+    height: 40rpx;
+    margin-left: 10px;
+    width: 40rpx;
+}
+
+.custom-header .header_title {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    flex: 1;
+    font-size: 18px;
+    font-weight: 500;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.main-title {
+    font-size: 32rpx;
+}
+
+.pannel .pannel-title {
+    font-weight: 500;
+    padding: 24rpx;
+}
+
+.pannel .pannel-body {
+    padding: 24rpx;
+}
+
+view {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1;
+}
+
+.right_icon:after {
+    background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    width: 20rpx;
+}
+
+.rule-modal .mask {
+    background-color: rgba(0,0,0,.9);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.rule-modal .nav-item {
+    align-items: center;
+    display: flex;
+    padding: 35rpx 120rpx;
+}
+
+.main-title {
+    font-size: 32rpx;
+}
+
+.pannel .pannel-title {
+    font-weight: 500;
+    padding: 24rpx;
+}
+
+.pannel .pannel-body {
+    padding: 24rpx;
+}
+
+view {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1;
+}
+
+.right_icon:after {
+    background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    width: 20rpx;
+}
+
+page {
+    background-color: #f6f6f6;
+}
+
+.mine-info-container {
+    padding-bottom: 10rpx;
+}
+
+.mine-info-container .page_ad .header_bg {
+    background-size: cover;
+    height: 480rpx;
+}
+
+.mine-info-container .page_ad .header_bg .header_title {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.mine-info-container .page_ad .header_bg .header_info {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30rpx 30rpx;
+}
+
+.mine-info-container .page_ad .header_bg .header_info .head_img {
+    background-size: cover;
+    border-radius: 27px;
+    height: 54px;
+    overflow: hidden;
+    width: 54px;
+}
+
+.mine-info-container .page_ad .header_bg .header_info .nick_name {
+    padding: 24rpx;
+}
+
+.mine-info-container .page_ad .header_bg .header_info .nick_name .usernickname {
+    color: #333;
+    font-size: 32rpx;
+}
+
+.mine-info-container .page_ad .header_bg .header_info .nick_name .nickphone {
+    color: #333;
+    font-size: 24rpx;
+    margin-top: 20rpx;
+}
+
+.mine-info-container .page_ad .header_bg .data_info {
+    display: flex;
+}
+
+.mine-info-container .page_ad .header_bg .data_info view {
+    color: #333;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.mine-info-container .page_ad .header_bg .data_info view text {
+    text-align: center;
+}
+
+.mine-info-container .page_ad .header_bg .dashboard_item {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.mine-info-container .page_ad .header_bg .dashboard_item .num {
+    color: #333;
+    font-size: 32rpx;
+    font-weight: 500;
+}
+
+.mine-info-container .page_ad .header_bg .dashboard_item .msg {
+    border-right: 1rpx solid #999;
+    color: #333;
+    font-size: 22rpx;
+    margin-top: 10rpx;
+    text-align: center;
+    width: 100%;
+}
+
+.mine-info-container .page_ad .header_bg .dashboard_item:last-child .msg {
+    border-right: none;
+}
+
+.mine-info-container .page_ad .header_bg .openMember {
+    color: #666;
+    display: flex;
+    margin-left: auto;
+    padding: 26rpx 0;
+}
+
+.mine-info-container .page_ad .header_bg .openMember.right_icon:after {
+    margin-top: 10rpx;
+}
+
+.mine-info-container .page_ad .memberBox {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -15px 30rpx 0;
+    padding: 30rpx;
+}
+
+.mine-info-container .page_ad .memberBox view {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.mine-info-container .page_ad .memberBox view text {
+    padding-top: 10px;
+}
+
+.mine-info-container .page_ad .home_bg {
+    background-size: cover;
+    border-radius: 30rpx;
+    height: 100%;
+    margin: 0 10px;
+}
+
+.mine-info-container .header {
+    background-color: #2facfb;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.mine-info-container .header .header-img {
+    align-items: center;
+    display: flex;
+    height: 44px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.mine-info-container .detail {
+    background-color: #fff;
+    margin-top: 24rpx;
+}
+
+.mine-info-container .detail .time_chart {
+    padding: 40rpx 40rpx 20rpx;
+}
+
+.mine-info-container .detail .time_chart image {
+    width: 100%;
+}
+
+.mine-info-container .detail .detail_body {
+    color: #666;
+    line-height: 1.3;
+    word-break: break-all;
+}
+
+.mine-info-container .pannel-body {
+    padding: 0;
+}
+
+.mine-info-container .mine_pannel {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0 24rpx;
+}
+
+.mine-info-container .mine_pannel .column .title {
+    align-items: center;
+    border-bottom: 1px solid hsla(0,0%,89%,.38);
+    display: flex;
+    justify-content: space-between;
+    line-height: 42rpx;
+    padding: 30rpx 20rpx;
+}
+
+.mine-info-container .mine_pannel .column .title text {
+    line-height: 24px;
+}
+
+.mine-info-container .mine_pannel .column .tips {
+    align-items: center;
+    color: #ff9543;
+    display: flex;
+    font-size: 24rpx;
+}
+
+.mine-info-container .mine_pannel .column .share_btn {
+    border: none;
+    font-size: 28rpx;
+    line-height: 23px;
+    margin-left: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}

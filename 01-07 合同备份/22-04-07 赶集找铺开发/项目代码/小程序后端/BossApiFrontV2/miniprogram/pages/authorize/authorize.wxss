@@ -1,0 +1,121 @@
+.main-title {
+    font-size: 32rpx;
+}
+
+.pannel .pannel-title {
+    font-weight: 500;
+    padding: 24rpx;
+}
+
+.pannel .pannel-body {
+    padding: 24rpx;
+}
+
+view {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1;
+}
+
+.right_icon:after {
+    background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    width: 20rpx;
+}
+
+.auth-login-container {
+    border-bottom: 2rpx solid hsla(0,0%,89%,.38);
+    margin-top: 52rpx;
+    padding: 32rpx;
+}
+
+.auth-login-container .head_info {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+}
+
+.auth-login-container .head_info .head_item {
+    display: flex;
+    justify-content: center;
+}
+
+.auth-login-container .head_info .head_img {
+    border-radius: 27px;
+    height: 54px;
+    overflow: hidden;
+    width: 54px;
+}
+
+.auth-login-container .head_info .nick_name {
+    font-size: 32rpx;
+    height: 48px;
+    line-height: 20px;
+    padding: 4px 10px;
+}
+
+.auth-login-container .head_info .nick_name view {
+    font-size: 32rpx;
+}
+
+.auth-login-container .line {
+    border-bottom: 2rpx solid hsla(0,0%,89%,.38);
+    padding: 20rpx;
+}
+
+.auth-login-container .authinfo {
+    margin-top: 50rpx;
+}
+
+.auth-login-container .authinfo .info {
+    color: #333;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 30rpx;
+}
+
+.auth-login-container .authinfo .scope {
+    color: #666;
+    display: block;
+    line-height: 40rpx;
+}
+
+.auth-login-container .button-view {
+    float: left;
+    margin-left: 24rpx;
+    margin-top: 70rpx;
+    width: 300rpx;
+}
+
+.auth-login-container .button-view button {
+    border-radius: 80rpx;
+    font-size: 36rpx;
+    font-weight: 500;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    width: 280rpx;
+}
+
+.auth-login-container .button-view button::after {
+    border: 1px solid #f8f8f8!important;
+}
+
+.auth-login-container .button-view .btn-bind {
+    background: #ffe60f;
+    color: #fff;
+}
+
+.auth-login-container .button-view .btn-cancel {
+    background: #f1f1f1;
+    color: #666;
+}
+.button-view button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

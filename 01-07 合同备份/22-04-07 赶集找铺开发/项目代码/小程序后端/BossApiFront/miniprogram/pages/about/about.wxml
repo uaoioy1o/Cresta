@@ -1,0 +1,38 @@
+<view>
+<view>
+    
+</view>
+<view style="font-weight:700;text-align:center;margin:0 auto;">
+关于我们
+</view>
+<text decode="{{true}}">
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;赶集找铺是中国领先的移动互联网商铺交易平台，是创造精准开店、闪电转店、极致服务的商业地产O2O实践者。赶集找铺秉承“让开店转店简单愉悦”的使命，用新技术、新方法推动行业的效率进化，致力干为商铺房东、商家、经纪公司搭建高效可信赖的商铺交易服务平台。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;赶集找铺与链家地产，我爱我家地产，百姓网，58同城，安居客，赶集网等知名企业多方合作，线上线下充分结合，帮客户快速达成合作。
+</text>
+<text style="font-weight: 700;" decode="{{true}}">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;企业使命
+</text>
+<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;让开店简单愉悦用技术方法与专业技能，整合店铺所需的数据与资源，让每个准备开店或在经营的店主，需要时可一呼百应满足所需，遵照他们的个性方式实现店铺经营，使店铺像一颗颗味道不同的城市糖豆，为各方创造甜蜜与欣喜。
+</text>
+<text style="font-weight: 700;" decode="{{true}}">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;企业愿景
+</text>
+<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;三千万开店人可依赖的伙伴为每一个开店人提供优质的真实铺源，成为开店人的可依赖伙伴，让开店人成为更好的自己。
+</text>
+<text style="font-weight: 700;" decode="{{true}}">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价值观
+</text>
+<text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;客户第一、团队协作、拥抱变化、正直诚信、敬业、勤俭、自我成长。客户第一，一切工作价值由客户判定，所有行动与创造基于客户视角才有意义。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;团队协作、拥抱变化，创新路上，没有正确的先例参考，唯有团队协作、灵活的拥抱变化，才可快速向前。
+</text>
+
+<text decode="{{true}}">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;正直诚信、敬业、勤俭，每位员工都需要正直诚信、敬业、勤俭勇于承担责任，并对成果严格自我要求，个人和组织方能按既定行进。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自我成长，一个人将自己的能量融入团队，形成合力，在团队中自我成长，才是对自身和团队价值最大化的方式，愿赶集找铺给您带来价值与欢乐。
+
+</text>
+
+
+</view>

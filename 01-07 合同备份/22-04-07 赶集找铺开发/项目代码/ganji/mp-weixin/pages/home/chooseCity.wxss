@@ -1,0 +1,114 @@
+
+.main-title {
+  font-size: 32rpx;
+}
+.pannel .pannel-title {
+  font-weight: 500;
+  padding: 24rpx;
+}
+.pannel .pannel-body {
+  padding: 24rpx;
+}
+view {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 1;
+}
+.right_icon:after {
+  background-image: url('https://tystatic.liuxx.com/wechat/images/right_icon.png');
+  background-size: cover;
+  content: ' ';
+  display: block;
+  height: 20rpx;
+  margin-left: 12rpx;
+  width: 20rpx;
+}
+page {
+  background: #f4f4f4;
+}
+.home-container .customer-header .header-img {
+  height: 44px;
+}
+.home-container .search {
+  justify-content: space-between;
+  width: calc(100vw - 210px);
+}
+.home-container .search,
+.home-container .search .search_input {
+  align-items: center;
+  background: #f8f8f8;
+  border-radius: 35px;
+  display: flex;
+}
+.home-container .search .search_input {
+  flex: 1;
+  margin: 0 12rpx;
+  padding: 12rpx;
+}
+.home-container .pannel .swiper {
+  height: 180rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  width: calc(100vw - 48rpx);
+}
+.home-container .pannel .swiper .banner_img {
+  background-size: cover;
+  border-radius: 12rpx;
+  height: 100%;
+  width: 100%;
+}
+.home-container .pannel .pannel-body {
+  display: flex;
+  padding: 0;
+}
+.home-container .pannel .pannel-body .menu {
+  background: #fff;
+  width: 150px;
+}
+.home-container .pannel .pannel-body .menu view {
+  height: 44px;
+  line-height: 44px;
+  padding-left: 48rpx;
+}
+.home-container .pannel .pannel-body .menu view.active {
+  background: #f4f4f4;
+}
+.home-container .pannel .pannel-body .city {
+  flex: 1;
+}
+.home-container .pannel .pannel-body .city view {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 48rpx;
+}
+.home-container .pannel .pannel-title {
+  display: flex;
+}
+.home-container .pannel .pannel-title .main-title {
+  color: #666;
+  font-weight: 400;
+  margin-right: 12px;
+}
+.home-container .pannel .pannel-title .main-title.active {
+  color: #fdbc17;
+  font-weight: 500;
+}
+.home-container .pannel .pannel-title .main-all {
+  color: #666;
+  font-size: 24rpx;
+  padding: 0 28rpx 0 24rpx;
+  position: relative;
+}
+.home-container .pannel .pannel-title .main-all::after {
+  background-image: url('https://tystatic.liuxx.com/wechat/images/right_icon.png');
+  background-size: cover;
+  bottom: 8rpx;
+  content: ' ';
+  display: block;
+  height: 20rpx;
+  margin-left: 12rpx;
+  position: absolute;
+  right: 0;
+  width: 20rpx;
+}
+

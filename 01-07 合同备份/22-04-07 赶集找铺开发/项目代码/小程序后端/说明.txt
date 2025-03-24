@@ -1,0 +1,6 @@
+GET	/students	获取所有学生
+请求方法	请求地址	后端操作
+POST	/students	增加学生
+GET	/students/	获取编号为pk的学生
+PUT	/students/	修改编号为pk的学生
+DELETE	/students/	删除编号为pk的学生

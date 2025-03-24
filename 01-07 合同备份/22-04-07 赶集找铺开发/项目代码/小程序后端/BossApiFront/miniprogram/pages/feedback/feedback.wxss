@@ -1,0 +1,144 @@
+.main-title {
+    font-size: 32rpx;
+}
+
+.pannel .pannel-title {
+    font-weight: 500;
+    padding: 24rpx;
+}
+
+.pannel .pannel-body {
+    padding: 24rpx;
+}
+
+view {
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1;
+}
+
+.right_icon:after {
+    background-image: url("https://tystatic.liuxx.com/wechat/images/right_icon.png");
+    background-size: cover;
+    content: " ";
+    display: block;
+    height: 20rpx;
+    margin-left: 12rpx;
+    width: 20rpx;
+}
+
+page {
+    background-color: #fff;
+}
+
+.mine-bindphone-box .main-title {
+    font-weight: 500;
+    margin-top: 24rpx;
+}
+
+.mine-bindphone-box .full-wrap {
+    margin-top: 24rpx;
+}
+
+.mine-bindphone-box .full-wrap .content {
+    margin: 0 24rpx;
+}
+
+.mine-bindphone-box .full-wrap .content .message {
+    height: 20px;
+    margin-bottom: 20rpx;
+    position: relative;
+}
+
+.mine-bindphone-box .full-wrap .content .message text {
+    background: #ffe60f;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 24rpx;
+    padding: 5px 10px;
+    position: absolute;
+    right: .4rem;
+}
+
+.mine-bindphone-box .full-wrap .content .bind-title {
+    color: #999;
+    padding: .28rem;
+}
+
+.mine-bindphone-box .full-wrap .content .card-table {
+    font-size: 28rpx;
+}
+
+.mine-bindphone-box .full-wrap .content .card-table .item-input {
+    border: 1rpx solid #e5e5e5;
+    border-radius: 10rpx;
+    padding: 12rpx;
+    width: calc(100vw - 72rpx);
+}
+
+.mine-bindphone-box .full-wrap .content .card-table input::-webkit-input-placeholder,.mine-bindphone-box .full-wrap .content .card-table textarea::-webkit-input-placeholder {
+    color: #999;
+}
+
+.mine-bindphone-box .full-wrap .content .table-body {
+    background: #fff;
+    border-radius: 10rpx;
+    padding: 24rpx 0 36rpx;
+    position: relative;
+}
+
+.mine-bindphone-box .full-wrap .content .table-body .text-content {
+    display: inline-block;
+    height: 20px;
+    text-align: right;
+    width: 100%;
+}
+
+.mine-bindphone-box .full-wrap .content .table-image {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24rpx 0;
+    width: calc(100vw - 72rpx);
+}
+
+.mine-bindphone-box .full-wrap .content .table-image .image {
+    align-items: center;
+    background: #f7f7f7;
+    background-size: cover;
+    display: flex;
+    height: calc((100vw - 72rpx)/4 - 24rpx);
+    justify-content: center;
+    margin-bottom: 24rpx;
+    margin-right: 24rpx;
+    width: calc((100vw - 72rpx)/4 - 24rpx);
+}
+
+.mine-bindphone-box .full-wrap .content .card-cell .card-cell-ft span {
+    color: #ffe60f;
+    font-size: 24rpx;
+}
+
+.mine-bindphone-box .full-wrap .psd_tip {
+    color: #999;
+    line-height: 1.5;
+    padding: .2rem .22rem 0;
+}
+
+.mine-bindphone-box .full-wrap .btn-oprate {
+    margin-top: 50px;
+}
+
+.mine-bindphone-box .full-wrap .btn-oprate .btn-padding {
+    margin: .72rem .6rem;
+}
+
+.mine-bindphone-box .full-wrap .btn-oprate .btn-padding .btn-bg {
+    background: #ffe60f;
+    border: 10rpx;
+    font-size: 32rpx;
+    line-height: 92rpx;
+}
+
+.mine-bindphone-box .full-wrap .btn-oprate .btn-padding .btn-bg::after {
+    border: none;
+}

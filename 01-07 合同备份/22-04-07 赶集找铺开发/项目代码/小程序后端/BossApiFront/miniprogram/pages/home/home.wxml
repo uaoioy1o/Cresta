@@ -1,0 +1,153 @@
+<!--pages/home/home.wxml-->
+<view class="home-container">
+    <!--上方轮播图-->
+    <view style="margin:40rpx 12px 0;">
+        <swiper circular autoplay>
+            <swiper-item class="item" wx:for="{{banner}}" wx:key="{{index}}">
+                <image src="{{'../../images/banner/'+item.image_src}}" style="border-radius: 15px;"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+
+    <!-- 四个图标 -->
+    <view class="nav">
+        <view class="nav1">
+            <view catchtap="navTap" class="nav-item" data-wpynavtap-a="{{item}}" wx:for="{{navData}}" wx:key="item">
+                <view style="margin:0 60rpx;">
+                    <image src="../../images/boss/{{item.icon}}.png" style="width:100rpx;height:100rpx"></image>
+                    <text>{{item.name}}</text>
+                </view>
+            </view>
+        </view>
+        <block wx:if="{{showMoreIcon}}">
+            <image src="../../images/nav-bottom.jpg" style="margin-top: 24rpx;width:calc(100vw - 96rpx);height:14rpx"></image>
+            <view class="nav2">
+                <view catchtap="navTap" class="nav-item" data-wpynavtap-a="{{item}}" wx:for="{{subMenu}}" wx:key="item">
+                    <view>
+                        <image src="../../images/{{item.icon}}.png" style="width:32rpx;height:32rpx"></image>
+                        <text>{{item.name}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+
+    <!-- tips轮播通知 -->
+    <view style="display: flex;flex-direction: row;align-items: center;height:{{tips.length==0?'0px':'50px'}};margin:96rpx 12px 0;box-shadow: 0 0 15px rgba(148, 148, 148, 0.15); margin-top: {{showMoreIcon?'46rpx;':'26rpx;'}};border-radius: 24rpx;">
+        <block wx:if="{{tips.length>0}}">
+            <image src="../../images/tips.png" style="width:32rpx;height:32rpx;padding:0 12rpx"></image>: <swiper autoplay="{{true}}" indicatorDots="{{false}}" interval="{{3000}}" style="height:50px;width:100%" vertical="{{true}}">
+                <swiper-item wx:for="{{tips}}" wx:key="item">
+                    <view style="height: 40px;line-height: 40px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;padding: 5px;"> 🎉🎉🎉{{item.msg}}🎉🎉🎉 </view>
+                </swiper-item>
+            </swiper>
+        </block>
+    </view>
+
+    <!-- 下方轮播图 -->
+    <view style="margin:40rpx 12px 0;">
+        <swiper circular autoplay>
+            <swiper-item class="item" wx:for="{{banner2}}" wx:key="{{index}}">
+                <image src="{{'../../images/banner/'+item.image_src}}" style="border-radius: 15px;"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+
+    <!-- 数据统计 -->
+    <view class="statistic">
+        <view catchtap="handleOpenPage" class="data_icon" data-wpyhandleopenpage-a="/pages/home/user" style="display: flex;flex-direction: column;align-items: center;justify-content: space-around;width:calc(100vw - 460rpx);height:300rpx;background-image: url('../../images/data/data-1.png')">
+            <view class="data_info" style="width:calc(100vw - 500rpx);line-height: 1.5;">
+                <text class="title">累计用户</text>
+                <text class="num" style="color:#FF9543">547439</text>
+                <text class="last">昨日新增839位</text>
+            </view>
+            <image src="../../images/1.png" style="width:60px;height:60px;padding-bottom: 12rpx;"></image>
+        </view>
+        <view style="display:flex;flex-direction: column;justify-content: space-between;">
+            <view catchtap="handleOpenPage" class="data_icon" data-wpyhandleopenpage-a="{{homeData.statistical.is_redirect==1?'/pages/home/find':''}}" style="background-image: url('../../images/data/data-2.png')">
+                <view class="data_info">
+                    <view style="display: flex;">
+                        <image src="../../images/2.png?type=2" style="width:32rpx;height:32rpx;margin-right:12rpx"></image>
+                        <text class="title">累计转店</text>
+                    </view>
+                    <view style="display: flex;align-items: center;padding-left: 24rpx;">
+                        <text class="num" style="color:#3BAAFB">256992</text>
+                        <text class="last">昨日新增1373家</text>
+                    </view>
+                </view>
+            </view>
+            <view catchtap="handleOpenPage" class="data_icon" data-wpyhandleopenpage-a="{{homeData.statistical.is_redirect==1?'/pages/home/find?type=3':''}}" style="background-image: url('../../images/data/data-3.png')">
+                <view class="data_info">
+                    <view style="display: flex;">
+                        <image src="../../images/3.png" style="width:32rpx;height:32rpx;margin-right:12rpx"></image>
+                        <text class="title">累计找店</text>
+                    </view>
+                    <view style="display: flex;align-items: center;padding-left: 24rpx;">
+                        <text class="num" style="color:#FF544D">325791</text>
+                        <text class="last">昨日新增1788家</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    
+    
+    <view class="pannel" style="padding-bottom:200rpx">
+        <!-- 转店，找店 -->
+        <view class="pannel-title">
+            <view bindtap="navSwitch" data-index="0" class="main-title {{navState==0?'active':''}}">
+                <text>最新转店信息</text>
+                <view class="border"></view>
+            </view>
+            <view bindtap="navSwitch" data-index="1" class="main-title {{navState==1?'active':''}}">
+                <text>最新找店信息</text>
+                <view class="border"></view>
+            </view>
+        </view>
+
+        <!-- 下方商店列表 -->
+        <view class="pannel-body">
+            <view style="border-bottom: 1rpx solid #F2F3F4;" wx:for="{{shop_list}}" wx:key="item">
+                <view class="tour-item">
+                    <!-- 左上角标题 -->
+                    <view class="thumb" style="background-image:url({{item.shopimage_set[0].image}})">
+                        <view class="bread" wx:if="{{item.is_recommend==1}}">置顶</view>
+                        <view class="bread" wx:if="{{item.is_recommend==0&&item.is_new==1}}">上新</view>
+                    </view>
+                    <!-- 店铺信息 -->
+                    <view class="info" >
+                        <view>
+                            <view class="title">
+                                <text>{{item.title}}</text>
+                            </view>
+                            <view class="info-des" wx:if="{{item.city_name}}"> {{item.city_name+'-'+item.area_name}} | {{item.area_size}} ㎡ </view>
+                            <view class="info-tags">
+                                <text style="{{index==0?'color:#FD4C38;border-color:#FD4C38':index==1?'color:#4B97E7;border-color:#4B97E7':'color:#FDBC17;border-color:#FDBC17'}}" wx:for="{{item.lable_list}}" wx:for-item="tag" wx:key="tag">{{tag}}</text>
+                            </view>
+                        </view>
+                        <view class="label">
+                            <view>
+                                <text class="price">
+                                    <text class="money">{{item.rent_money}}</text>元/月 </text>
+                            </view>
+                            <text class="label-distance">更新时间：{{item.createTime}}</text>
+                        </view>
+                    </view>
+                </view>
+                <!-- N人咨询 -->
+                <view class="tour-bottom">
+                    <view>
+                        <image catchtap="$store_item$openProfile" data-com-index="{{undefined}}" data-wpyopenprofile-a="{{headImg}}" src="{{headImg.headimgurl}}" style="width:48rpx;height:48rpx;border-radius:24rpx" wx:for="{{item.consultant_list}}" wx:for-item="headImg" wx:key="headImg"></image>
+                    </view>
+                    <view class="right_icon" style="display: flex;align-items: center;">{{item.consultant_count>1000?'1000+':item.consultant_count}}人已咨询</view>
+                </view>
+                <!-- <view class="tour-bottom btn-area" wx:if="{{$store_item$btnType=='follow'}}">
+                    <text catchtap="$store_item$handleCancel" data-com-index="{{undefined}}" data-wpyhandlecancel-a="{{item}}">取消关注</text>
+                    <text catchtap="$store_item$handleCallPhone" data-com-index="{{undefined}}" data-wpyhandlecallphone-a="{{item}}">电话咨询</text>
+                </view> -->
+
+            </view>
+        </view>
+    </view>
+    
+</view>
+

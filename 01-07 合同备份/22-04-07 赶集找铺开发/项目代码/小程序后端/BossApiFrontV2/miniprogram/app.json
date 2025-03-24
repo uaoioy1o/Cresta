@@ -1,0 +1,49 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/shopdetail/shopdetail",
+        "pages/hometransfer/hometransfer",
+        "pages/homerent/homerent",
+        "pages/commonq/commonq",
+        "pages/refresh/refresh",
+        "pages/searchhistory/searchhistory",
+        "pages/publishfee/publishefee",
+        "pages/mine/mine",
+        "pages/authorize/authorize",
+        "pages/choosecity/choosecity",
+        "pages/consult/consult",
+        "pages/service/service",
+        "pages/message/message",
+        "pages/feedback/feedback",
+        "pages/about/about",
+        "pages/publish/publish",
+        "pages/transfer/transfer"
+    ],
+    "window": {
+        "backgroundColor": "#FFFFFF",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6F6F6",
+        "navigationBarTitleText": "云开发 QuickStart",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [{
+            "pagePath": "pages/home/home",
+            "text": "首页",
+            "iconPath": "images/boss/icon_1_normal@3x-01.png",
+            "selectedIconPath": "images/boss/icon_1_sel@3x-01.png"
+        }, {
+            "pagePath": "pages/publish/publish",
+            "text": "发布",
+            "iconPath": "images/boss/icon_3_normal@3x.png",
+            "selectedIconPath": "images/boss/icon_3_normal@3x.png"
+        }, {
+            "pagePath": "pages/mine/mine",
+            "text": "我的",
+            "iconPath": "images/boss/icon_2_normal@3x-01.png",
+            "selectedIconPath": "images/boss/icon_2_sel@3x-01.png"
+        }]
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+}

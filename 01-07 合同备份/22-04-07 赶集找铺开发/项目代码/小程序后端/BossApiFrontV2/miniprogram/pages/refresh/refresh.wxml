@@ -1,0 +1,60 @@
+<!-- pages/refresh/refresh.wxml -->
+<view class="container">
+    <view>
+        <image mode="widthFix" src="../../images/threeup.png" style="width:calc(100vw)"></image>
+    </view>
+    <view class="detail">
+        <view class="pannel">
+            <view class="pannel-title" style="text-align:center;margin-top:50rpx;">
+                <text class="main-title" style="">选择服务</text>
+            </view>
+        </view>
+    </view>
+    <!-- <view class="detail">
+        <view class="pannel">
+            <view class="pannel-body">
+                <view class="container_input_item">
+                    <text>刷新点余额：</text>
+                    <view style=" display: flex;align-items: center;"> {{amount}} </view>
+                </view>
+            </view>
+        </view>
+    </view> -->
+    <!-- 刷新匹配置顶 -->
+    <view class="memberBox" style="margin-top:20rpx;">
+        <view wx:for="{{icon}}" wx:key="item">
+            <navigator class="" target="" url="{{item.url}}" hover-class="navigator-hover" open-type="navigate">
+                <image src="../../images/boss/{{item.icon}}.png" style="width:90rpx;height:90rpx"></image>
+            </navigator>
+            <navigator class="" style="margin-top:18rpx;padding-left:15rpx;" target="" url="{{item.url}}" hover-class="navigator-hover" open-type="navigate">
+                <text>{{item.title}}</text>
+            </navigator>
+        </view>
+    </view>
+    <view class="detail">
+        <view class="pannel">
+            <view class="pannel-body" style="padding:24rpx">
+                <view class="container_input_item" style="height:60px;flex-direction: column;color:#FF9543;text-align:center;">
+                    <!-- <text style="width:100%;color:#FF9543;height: 20px;">支付1元可以获得刷新点</text> -->
+                    <text style="width:100%;color:#FF9543;height: 20px;">
+                        购买服务后365天内有效，增加店铺曝光频率
+                    </text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="footer">
+        <view style="display: flex;width: 100%;align-items: center;justify-content: center;margin-bottom: 30px;">
+            <view class="btn_area">
+                <view class="icon">
+                    <text>支付金额：￥{{amount}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="btn_area">
+            <button catchtap="postMoney" class="goyuyue" type="default">
+                <text style="margin:0 12rpx 0 24rpx;">确定</text>
+            </button>
+        </view>
+    </view>
+</view>

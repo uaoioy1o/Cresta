@@ -1,0 +1,71 @@
+<!--pages/refresh/refresh.wxml-->
+<text>pages/refresh/refresh.wxml</text>
+<view class="container">
+    <view>
+        <image mode="widthFix" src="{{ossHost}}zhuandian/wx_app/refresh.jpg" style="width:calc(100vw)"></image>
+    </view>
+    <view class="detail">
+        <view class="pannel">
+            <view class="pannel-title">
+                <text class="main-title">选择服务</text>
+            </view>
+            <view class="pannel-body">
+                <view class="container_input_item">
+                    <text>每天刷新次数：</text>
+                    <view style=" display: flex;align-items: center;">
+                        <image catchtap="min" src="../../images/minus-square.png" style="width:48rpx;height:48rpx"></image>
+                        <input bindinput="inputValueChanged" confirmType="确定" data-name="num" type="number" value="{{num}}"></input>
+                        <image catchtap="plus" src="../../images/plus-square.png" style="width:48rpx;height:48rpx"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="detail">
+        <view class="pannel">
+            <view class="pannel-body">
+                <view catchtap="handleSync" class="container_input_item">
+                    <view style="display: flex;align-items: center;">
+                        <image src="../../images/{{isSync?'confirm':'circle'}}.png" style="width:36rpx;height:36rpx;margin-right:24rpx"></image>
+                        <text style="width: 100%;flex: 1;">{{dataSource[currentId].msg}}</text>
+                    </view>
+                    <view style=" display: flex;align-items: center;"> ¥ 5 </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="detail">
+        <view class="pannel">
+            <view class="pannel-body">
+                <view class="container_input_item">
+                    <text>刷新点余额：</text>
+                    <view style=" display: flex;align-items: center;"> {{amount}} </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="detail">
+        <view class="pannel">
+            <view class="pannel-body" style="padding:24rpx">
+                <view class="container_input_item" style="height:60px;flex-direction: column;color:#FF9543">
+                    <text style="width:100%;color:#FF9543;height: 20px;">每支付1元可以获得1个刷新点</text>
+                    <text style="width:100%;color:#FF9543;height: 20px;">购买服务后365天内有效，过期剩余次数作废</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="footer">
+        <view style="display: flex;width: 100%;">
+            <view class="btn_area">
+                <view class="icon">
+                    <text>支付金额：￥{{totalMoney}}</text>
+                </view>
+            </view>
+            <view class="btn_area">
+                <button catchtap="postMoney" class="goyuyue" type="default">
+                    <text style="margin:0 12rpx 0 24rpx;">确定</text>
+                </button>
+            </view>
+        </view>
+    </view>
+</view>

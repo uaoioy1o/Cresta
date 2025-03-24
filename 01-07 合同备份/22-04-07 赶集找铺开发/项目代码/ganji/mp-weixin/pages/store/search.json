@@ -1,0 +1,11 @@
+{
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "store-item": "/components/StoreItem",
+    "create-store": "/components/CreateStore",
+    "store-picker": "/components/StorePicker",
+    "empty": "/components/Empty",
+    "banner": "/components/Banner"
+  }
+}
